@@ -66,3 +66,4 @@ File naming convention: `{prefix_for_priority}.{project_code}.{gnos_id}.{data_ty
    ] 
 }
 ```
+Fields essential to the S3 transfer job are: gnos_id, gnos_repo, files.*
