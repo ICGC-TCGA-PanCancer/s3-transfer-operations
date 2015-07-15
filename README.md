@@ -29,18 +29,18 @@ The process above is repeated until the all JSON files (all Jobs) are moved to `
 
 File name: `a0001.PACA-CA.38a2dbee-063a-401e-8d4c-fdd1116d91fb.BAW-Normal.json`
 
-File convention: `{prefix_for_priority}.{project_code}.{gnos_id}.{data_type}.json`
+File naming convention: `{prefix_for_priority}.{project_code}.{gnos_id}.{data_type}.json`
 ```
 {
    "data_type": "bwa_alignment",
    "project_code": "PACA-CA",
    "submitter_donor_id": "PCSI_0451",
    "is_santa_cruz": true,
-   "gnos_id": "38a2dbee-063a-401e-8d4c-fdd1116d91fb", 
    "specimen_type": "Normal - other", 
    "submitter_sample_id": "ASHPC_0023_Pa_R", 
    "submitter_specimen_id": "ASHPC_0023_Pa_R",
    "aliquot_id": "72a3ad80-9722-49bb-b508-c88b48dfd0bb", 
+   "gnos_id": "38a2dbee-063a-401e-8d4c-fdd1116d91fb", 
    "gnos_repo": [
        "https://gtrepo-bsc.annailabs.com/"
    ], 
