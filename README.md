@@ -27,8 +27,9 @@ The process above is repeated until the all JSON files (all Jobs) are moved to `
 
 ## Example JSON file
 
-File name: a0001.PACA-CA.38a2dbee-063a-401e-8d4c-fdd1116d91fb.BAW-Normal.json
-File convention: \{prefix_for_priority\}.\{project_code\}.\{gnos_uuid\}.\{data_type\}.json
+File name: `a0001.PACA-CA.38a2dbee-063a-401e-8d4c-fdd1116d91fb.BAW-Normal.json`
+
+File convention: `{prefix_for_priority}.{project_code}.{gnos_id}.{data_type}.json`
 ```
 {
    "data_type": "bwa_alignment",
