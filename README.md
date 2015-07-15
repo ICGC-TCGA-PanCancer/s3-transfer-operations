@@ -5,6 +5,8 @@ migrating PCAWG data from GNOS to Amazon S3. No software code should be added he
 
 More details regarding the SOP come soon.
 
+For an overview of how this related to the overall S3 upload effort see the [Functional Spec](https://wiki.oicr.on.ca/display/Collabor/Functional+Spec+-+ICGC+PanCancer+Data+Load).  This repo is refered to there as the "Git Order System".
+
 ## SOP
 
 * bulk generation script that queries the ES index on pancancer.info and a project whitelist from the orchestrator (Junjun for the bulk script, Christina for project whitelist)
