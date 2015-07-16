@@ -16,13 +16,24 @@ current repo.
 * the Launcher VM periodically runs a script that checks out this git repo, loops over jobs in `todo-jobs`, and enqueues them into the workflow order queue system, any previously queued, running, finished, or failed are ignored
     * JSON files should be sorted ascendingly, files listed first are to be scheduled first
 * queued work on the Launcher eventually triggers the workflow to run on a Worker node, the workflow interacts with git
-    * running workflow moves the JSON to `downloading-jobs` followed by git commit and push
-    * once download completes, JSON moved to `uploading-jobs` followed by git commit and push 
-    * once upload completes, JSON moved to `completed-jobs` followed by git commit and push
-    * if an error is detected by the workflow JSON is moved to `failed-jobs` followed by git commit and push
+    * running workflow moves the JSON to `downloading-jobs`
+    * once download completes, JSON moved to `uploading-jobs`
+    * once upload completes, JSON moved to `completed-jobs`
+    * if an error is detected by the workflow JSON is moved to `failed-jobs`
     * optional: the workflow encodes debug and/or statistics in the JSON that it moves to `failed-jobs` or `completed-jobs`
+* nightly, Elasticsearch index will be built picking up completed jobs from the git repo and marks relavent flags accordingly
 
-The process above is repeated until the all JSON files (all Jobs) are moved to `completed-jobs` folder
+Each JSON file movement should be performed as: git pull => git mv ... => git commit => git push
+
+*Any failure with any git operation may very well indicate conflict between worker nodes, such as double scheduling particularly at the first step of the workflow*
+
+The process above is repeated until the all JSON files (all Jobs) are moved to `completed-jobs` folder.
+
+Note that jobs ended up in `failed-jobs` folder should be followed up, when appropriate the corresponding JSON files need to be manually moved (git mv, commit, push) back to `todo-jobs` folder. When JSON file got stucked for unexpected duration in `downloading-jobs` or `uploading-jobs`, investigation should be carried out, when appropriate follow the process as handling failed jobs.
+
+Important:
+* no files shall be deleted in any situations!
+* all git operations by the workflow must be done on the `master` branch.
 
 
 ## Example JSON file
@@ -66,4 +77,4 @@ File naming convention: `{prefix_for_priority}.{project_code}.{gnos_id}.{data_ty
    ] 
 }
 ```
-Fields essential to the S3 transfer job are: gnos_id, gnos_repo, files.*
+Fields essential to the S3 transfer job are: `gnos_id`, `gnos_repo`, `files.*`
