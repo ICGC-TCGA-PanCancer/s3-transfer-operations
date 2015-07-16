@@ -12,8 +12,8 @@ current repo.
 
 * bulk generation script that queries the ES index on pancancer.info, metadata service (to get object IDs) and a project whitelist from the orchestrator (Junjun for the bulk script, Christina for project whitelist. Should start with Santa Cruz items).
    * generates JSON files in bulk and check into this GitHub repo under `backlog-jobs`
-   * orchestrator examines the backlog JSON in `backlog-jobs`, moves high priority jobs to `todo-jobs`
-* the Launcher VM periodically runs a script that checks out this git repo, loops over jobs in `todo-jobs`, and enqueues them into the workflow order queue system, any previously queued, running, finished, or failed are ignored
+   * orchestrator examines the backlog JSON in `backlog-jobs`, moves high priority jobs to `queued-jobs`
+* the Launcher VM periodically runs a script that checks out this git repo, loops over jobs in `queued-jobs`, and enqueues them into the workflow order queue system, any previously queued, running, finished, or failed are ignored
     * JSON files should be sorted ascendingly, files listed first are to be scheduled first
 * queued work on the Launcher eventually triggers the workflow to run on a Worker node, the workflow interacts with git
     * running workflow moves the JSON to `downloading-jobs`
@@ -29,7 +29,7 @@ Each JSON file movement should be performed as: git pull => git mv ... => git co
 
 The process above is repeated until the all JSON files (all Jobs) are moved to `completed-jobs` folder.
 
-Note that jobs ended up in `failed-jobs` folder should be followed up, when appropriate the corresponding JSON files need to be manually moved (git mv, commit, push) back to `todo-jobs` folder. When JSON file got stucked for unexpected duration in `downloading-jobs` or `uploading-jobs`, investigation should be carried out, when appropriate follow the process as handling failed jobs.
+Note that jobs ended up in `failed-jobs` folder should be followed up, when appropriate the corresponding JSON files need to be manually moved (git mv, commit, push) back to `queued-jobs` folder. When JSON file got stucked for unexpected duration in `downloading-jobs` or `uploading-jobs`, investigation should be carried out, when appropriate follow the process as handling failed jobs.
 
 Important:
 * no files shall be deleted in any situations!
