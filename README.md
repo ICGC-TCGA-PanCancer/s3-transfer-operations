@@ -38,7 +38,7 @@ Important:
 
 ## Example JSON file
 
-File name: `a0001.PACA-CA.38a2dbee-063a-401e-8d4c-fdd1116d91fb.BAW-Normal.json`
+File name: `a0001.PACA-CA.38a2dbee-063a-401e-8d4c-fdd1116d91fb.BWA-Normal.json`
 
 File naming convention: `{prefix_for_priority}.{project_code}.{gnos_id}.{data_type}.json`
 ```
