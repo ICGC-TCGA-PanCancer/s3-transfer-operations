@@ -10,6 +10,8 @@ current repo.
 
 ## SOP
 
+### Major steps
+
 * bulk generation script that queries the ES index on pancancer.info, metadata service (to get object IDs) and a project whitelist from the orchestrator (Junjun for the bulk script, Christina for project whitelist. Should start with Santa Cruz items).
    * generates JSON files in bulk and check into this GitHub repo under `backlog-jobs`
    * orchestrator examines the backlog JSON in `backlog-jobs`, moves high priority jobs to `queued-jobs`
@@ -23,17 +25,21 @@ current repo.
     * optional: the workflow encodes debug and/or statistics in the JSON that it moves to `failed-jobs` or `completed-jobs`
 * nightly, Elasticsearch index will be built picking up completed jobs from the git repo and marks relavent flags accordingly
 
-Each JSON file movement should be performed as: git pull => git mv ... => git commit => git push
-
-*Any failure with any git operation may very well indicate conflict between worker nodes, such as double scheduling particularly at the first step of the workflow*
-
 The process above is repeated until the all JSON files (all Jobs) are moved to `completed-jobs` folder.
 
-Note that jobs ended up in `failed-jobs` folder should be followed up, when appropriate the corresponding JSON files need to be manually moved (git mv, commit, push) back to `queued-jobs` folder. When JSON file got stucked for unexpected duration in `downloading-jobs` or `uploading-jobs`, investigation should be carried out, when appropriate follow the process as handling failed jobs.
+### Important notes
 
-Important:
-* no files shall be deleted in any situations!
-* all git operations by the workflow must be done on the `master` branch.
+* All git operations by the workflow must be done on the `master` branch.
+
+* Each JSON file movement should be performed as: git pull => git mv ... => git commit => git push
+
+* Any failure with any git operation may very well indicate conflict between worker nodes, such as double scheduling particularly at the first step of the workflow. Appropriate action needs to follow.
+
+* First step in downloading phase is to download GNOS metadata XML. Before proceeding further, md5sum of this XML (after striping out the dynamic content mentioned in https://github.com/ICGC-TCGA-PanCancer/s3-transfer-operations/issues/2) must be checked against what recorded in the JSON. If md5sum does not match, transfer job must be stopped and JSON file must be moved to `failed-jobs` folder with commit message: GNOS metadata XML md5sum mismatch.
+
+* Jobs ended up in `failed-jobs` folder should be followed up, when appropriate the corresponding JSON files need to be manually moved (git mv, commit, push) back to `queued-jobs` folder. When JSON file got stucked for unexpected duration in `downloading-jobs` or `uploading-jobs`, investigation should be carried out, when appropriate follow the process as handling failed jobs.
+
+* No files shall be deleted in any situations!
 
 
 ## Example JSON file
