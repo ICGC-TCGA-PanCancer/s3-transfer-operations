@@ -16,8 +16,9 @@ current repo.
    * generates JSON files in bulk and check into this GitHub repo under `backlog-jobs`
    * orchestrator examines the backlog JSON in `backlog-jobs`, moves high priority jobs to `queued-jobs`
 * the Launcher VM periodically runs a script that checks out this git repo, loops over jobs in `queued-jobs`, and enqueues them into the workflow order queue system, any previously queued, running, finished, or failed are ignored
-    * JSON files should be sorted ascendingly, files listed first are to be scheduled first
+    * JSON files should be *sorted ascendingly*, files listed first are to be scheduled first
 * queued work on the Launcher eventually triggers the workflow to run on a Worker node, the workflow interacts with git
+    * first step is to verify whether GNOS metadata XML has not been altered comparing to when the JSON file was generated. JSON is moved to `verifying-jobs`
     * running workflow moves the JSON to `downloading-jobs`
     * once download completes, JSON moved to `uploading-jobs`
     * once upload completes, JSON moved to `completed-jobs`
@@ -44,9 +45,9 @@ The process above is repeated until the all JSON files (all Jobs) are moved to `
 
 ## Example JSON file
 
-File name: `a0001.PACA-CA.38a2dbee-063a-401e-8d4c-fdd1116d91fb.BWA-Normal.json`
+File name: `38a2dbee-063a-401e-8d4c-fdd1116d91fb.PACA-CA.BWA-Normal.json`
 
-File naming convention: `{prefix_for_priority}.{project_code}.{gnos_id}.{data_type}.json`
+File naming convention: `{gnos_id}.{project_code}.{data_type}.json`
 ```
 {
    "data_type": "bwa_alignment",
