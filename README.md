@@ -32,9 +32,9 @@ The process above is repeated until the all JSON files (all Jobs) are moved to `
 
 * All git operations by the workflow must be done on the `master` branch.
 
-* Each JSON file movement should be performed as: git pull => git mv ... => git commit => git push
+* Each JSON file movement should be performed as a sequence of git commands: `git pull  && git mv .... && git commit -m 'step1: json file name' && git push`
 
-* Any failure with any git operation may very well indicate conflict between worker nodes, such as double scheduling particularly at the first step of the workflow. Appropriate action needs to follow.
+* Any failure with any git command may very well indicate conflict between worker nodes, such as double scheduling particularly at the first step of the workflow. Appropriate action needs to follow. The simplest resolution maybe just to terminate the job with none zero exit code.
 
 * First step in downloading phase is to download GNOS metadata XML. Before proceeding further, md5sum of this XML (after striping out the dynamic content mentioned in https://github.com/ICGC-TCGA-PanCancer/s3-transfer-operations/issues/2) must be checked against what recorded in the JSON. If md5sum does not match, transfer job must be stopped and JSON file must be moved to `failed-jobs` folder with commit message: GNOS metadata XML md5sum mismatch.
 
