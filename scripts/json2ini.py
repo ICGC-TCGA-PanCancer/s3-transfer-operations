@@ -46,7 +46,7 @@ def main():
         template_data = f.read()
     # Final INI File
     final_data = pystache.render(template_data, handlebars)
-    print final_data # For debugging
+    #print final_data # For debugging
     with codecs.open(os.path.join(output_folder, os.path.basename(json_input)) + ".ini", "w", 'utf-8') as f:
         f.write(final_data)
 
