@@ -2,14 +2,14 @@
 
 # Bridge between JSON and QUEUING SYSTEM
 
-JSON_REPO="~/gitroot/s3-transfer-operations"
+JSON_REPO="/home/ubuntu/gitroot/s3-transfer-operations"
 REPO_FOLDER="testing"
 
 JSON_SCRIPTS="${JSON_REPO}/scripts"
 JSON_QUEUE="${JSON_REPO}/${REPO_FOLDER}/queued-jobs"
 
 # Create the storage bucket for the INI files
-[[ ! -d ~/ini-bucket ]] && mkdir ~/ini-bucket
+[[ ! -d /home/ubuntu/ini-bucket ]] && mkdir /home/ubuntu/ini-bucket
 
 
 # Generate INI Files
