@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Bridge between JSON and QUEUING SYSTEM
+
+JSON_REPO="/home/ubuntu/gitroot/s3-transfer-operations"
+REPO_FOLDER="testing"
+
+JSON_SCRIPTS="${JSON_REPO}/scripts"
+JSON_QUEUE="${JSON_REPO}/${REPO_FOLDER}/queued-jobs"
+
+# Create the storage bucket for the INI files
+[[ ! -d /home/ubuntu/ini-bucket ]] && mkdir /home/ubuntu/ini-bucket
+
+
+# Generate INI Files
+cd ${JSON_QUEUE}
+git pull
+FILE_LIST="$(ls *.json)"
+
+cd ${JSON_SCRIPTS}
+for f in ${FILE_LIST}; do
+	/usr/bin/python json2ini.py ${JSON_QUEUE}/$f template.ini ~/ini-bucket
+done
+
+# Call Generator to enqueue ini files
+cd ~/arch3
+Generator --config config/masterConfig.ini --ini-dir ~/ini-bucket
+
