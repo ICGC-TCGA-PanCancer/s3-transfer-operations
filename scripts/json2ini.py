@@ -36,7 +36,7 @@ def main():
     handlebars['filename'] = os.path.basename(sys.argv[1])
     
     # Create the QUEUE System Hash Value from Junjun's SOP
-    handlebars['hash'] = handlebars['filename'].split('.')[1:]
+    handlebars['hash'] = '.'.join(handlebars['filename'].split('.')[1:])
 
     # Fix thhe gnos server output to be compatible with ini file format
     handlebars['gnosserver'] = str(','.join(json_data[u'gnos_repo']))
