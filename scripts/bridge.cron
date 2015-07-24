@@ -21,6 +21,7 @@ cd /home/ubuntu/gitroot && git clone https://github.com/ICGC-TCGA-PanCancer/s3-t
 
 # Generate INI Files
 cd ${JSON_QUEUE}
+FILE_LIST=`ls $.json`
 docker run -it -e FILE_LIST=`ls $.json` -v /home/ubuntu/.gnos/ini-bucket:/gitroot/ini-bucket -v /home/ubuntu/gitroot/s3-transfer-operations:/gitroot/s3-transfer-operations icgc/s3-data-transfer-scripts bash -c "echo $FILE_LIST; for f in $FILE_LIST; do python scripts/json2ini.py /gitroot/s3-transfer-operations/testing/$f /scripts/template.ini /gitroot/ini-bucket; done"
 
 
