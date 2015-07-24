@@ -11,6 +11,7 @@ JSON_QUEUE="${JSON_REPO}/${REPO_FOLDER}/queued-jobs"
 # Create the storage bucket for the INI files
 [[ ! -d /home/ubuntu/ini-bucket ]] && mkdir /home/ubuntu/ini-bucket
 
+# We are dockerizing the json script this code will change
 
 # Generate INI Files
 cd ${JSON_QUEUE}
@@ -24,5 +25,6 @@ done
 
 # Call Generator to enqueue ini files
 cd ~/arch3
-Generator --config config/masterConfig.ini --ini-dir ~/ini-bucket
+# We need to create a seperate cron job to call the Generator inside the container
+# Generator --config config/masterConfig.ini --ini-dir ~/ini-bucket
 
