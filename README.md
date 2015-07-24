@@ -45,43 +45,47 @@ The process above is repeated until the all JSON files (all Jobs) are moved to `
 
 ## Example JSON file
 
-File name: `38a2dbee-063a-401e-8d4c-fdd1116d91fb.PACA-CA.BWA-Normal.json`
+File name: `54beeb57-e18e-49de-a49b-b8dc2ac91088.PACA-CA.PCSI_0235.PCSI_0235_Ly_R.WGS-BWA-Normal.json`
 
-File naming convention: `{gnos_id}.{project_code}.{data_type}.json`
+File naming convention: `{gnos_id}.{project_code}.{donor_id}.{specimen_id}.{data_type}.json`
 ```
 {
-   "data_type": "bwa_alignment",
-   "project_code": "PACA-CA",
-   "submitter_donor_id": "PCSI_0451",
-   "is_santa_cruz": true,
-   "specimen_type": "Normal - other", 
-   "submitter_sample_id": "ASHPC_0023_Pa_R", 
-   "submitter_specimen_id": "ASHPC_0023_Pa_R",
-   "aliquot_id": "72a3ad80-9722-49bb-b508-c88b48dfd0bb", 
-   "gnos_id": "38a2dbee-063a-401e-8d4c-fdd1116d91fb", 
-   "gnos_repo": [
-       "https://gtrepo-bsc.annailabs.com/"
-   ], 
-   "files": [
-       {
-           "file_name": "38a2dbee-063a-401e-8d4c-fdd1116d91fb.xml",
-           "file_md5sum": "dd990adba7b83a457ee69a879699ef06",
-           "file_size": 19650,
-           "object_id": "63269040-ed8e-4efb-8fd4-220aac448171"
-       },
-       {
-           "file_name": "61a67b41ed8dbe7bc4c32625dfe74814.bam", 
-           "file_md5sum": "61a67b41ed8dbe7bc4c32625dfe74814", 
-           "file_size": 169999662650,
-           "object_id": "63269040-ed8e-4efb-8fd4-220aac448172"
-       },
-       {
-           "file_name": "61a67b41ed8dbe7bc4c32625dfe74814.bam.bai", 
-           "file_md5sum": "50b5a2ae835a180cafb6e386cfd87a97",
-           "file_size": 3516116,
-           "object_id": "5f0db67d-5a46-422e-8b57-48ce79165ff6"
-       }
-   ] 
+    "available_repos": [
+        "https://gtrepo-ebi.annailabs.com/",
+        "https://gtrepo-bsc.annailabs.com/"
+    ],
+    "is_santa_cruz": false,
+    "project_code": "PACA-CA",
+    "submitter_donor_id": "PCSI_0235",
+    "submitter_specimen_id": "PCSI_0235_Ly_R",
+    "submitter_sample_id": "PCSI_0235_Ly_R",
+    "aliquot_id": "7d752281-be08-47c9-ad83-dfcf2347ba5e",
+    "specimen_type": "Normal - blood derived",
+    "data_type": "WGS-BWA-Normal",
+    "gnos_id": "54beeb57-e18e-49de-a49b-b8dc2ac91088",
+    "gnos_repo": [
+        "https://gtrepo-bsc.annailabs.com/"
+    ],
+    "files": [
+        {
+            "file_md5sum": "fdac6eb702b99c391c092e25c35ea594",
+            "file_name": "fdac6eb702b99c391c092e25c35ea594.bam",
+            "file_size": 114968925237,
+            "object_id": "936440a1-1679-4401-9963-a6e75315d55d"
+        },
+        {
+            "file_md5sum": "c16bedaff311ef8b4c311d9661d030ec",
+            "file_name": "fdac6eb702b99c391c092e25c35ea594.bam.bai",
+            "file_size": 14741520,
+            "object_id": "6e637cd9-de95-4d8f-9a45-776f7e39ff9e"
+        },
+        {
+            "file_md5sum": "52ec96b4298843efb05462989676cd37",
+            "file_name": "54beeb57-e18e-49de-a49b-b8dc2ac91088.xml",
+            "file_size": 31573,
+            "object_id": "537088ac-36c0-4387-b204-12cc473ec7c4"
+        }
+    ]
 }
 ```
 Fields essential to the S3 transfer job are: `gnos_id`, `gnos_repo`, `files.*`
