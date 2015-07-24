@@ -1,30 +1,30 @@
 #!/bin/bash
 
 # Bridge between JSON and QUEUING SYSTEM
+# 30 * * * *
 
+# Configuration
 JSON_REPO="/home/ubuntu/gitroot/s3-transfer-operations"
 REPO_FOLDER="testing"
 
+# Begin Execution
 JSON_SCRIPTS="${JSON_REPO}/scripts"
 JSON_QUEUE="${JSON_REPO}/${REPO_FOLDER}/queued-jobs"
 
 # Create the storage bucket for the INI files
-[[ ! -d /home/ubuntu/ini-bucket ]] && mkdir /home/ubuntu/ini-bucket
+[[ ! -d /home/ubuntu/.gnos/ini-bucket ]] && mkdir /home/ubuntu/.gnos/ini-bucket
 
-# We are dockerizing the json script this code will change
+# Pull down the s3-transfer-operations repo
+[[ -d /home/ubuntu/gitroot/s3-transfer-operations ]] && rm -rf /home/ubuntu/gitroot/s3-transfer-operations
+[[ ! -d /home/ubuntu/gitroot ]] && mkdir /home/ubuntu/gitroot
+cd /home/ubuntu/gitroot && git clone https://github.com/ICGC-TCGA-PanCancer/s3-transfer-operations.git
 
 # Generate INI Files
 cd ${JSON_QUEUE}
 git pull
 FILE_LIST="$(ls *.json)"
 
-cd ${JSON_SCRIPTS}
-for f in ${FILE_LIST}; do
-	/usr/bin/python json2ini.py ${JSON_QUEUE}/$f template.ini ~/ini-bucket
-done
-
-# Call Generator to enqueue ini files
-cd ~/arch3
-# We need to create a seperate cron job to call the Generator inside the container
-# Generator --config config/masterConfig.ini --ini-dir ~/ini-bucket
+docker run -it -v /home/ubuntu/.gnos/ini-bucket:/gitroot/ini-bucket \
+	       -v /home/ubuntu/gitroot/s3-transfer-operations:/gitroot/s3-transfer-operations \
+	       bash -c "for f in $FILE_LIST; do python scripts/json2ini.py /gitroot/s3-transfer-operations/testing/$f /scripts/template.ini /gitroot/ini-bucket; done" 
 
