@@ -34,6 +34,7 @@ def main():
 
     # Store the json filename in the mustache object
     handlebars['filename'] = os.path.basename(sys.argv[1])
+    handlebars['hash'] = handlebars['filename'].split('.')[1:]
 
     # Fix thhe gnos server output to be compatible with ini file format
     handlebars['gnosserver'] = str(','.join(json_data[u'gnos_repo']))
