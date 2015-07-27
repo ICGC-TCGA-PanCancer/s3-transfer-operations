@@ -45,45 +45,55 @@ The process above is repeated until the all JSON files (all Jobs) are moved to `
 
 ## Example JSON file
 
-File name: `54beeb57-e18e-49de-a49b-b8dc2ac91088.PACA-CA.PCSI_0235.PCSI_0235_Ly_R.WGS-BWA-Normal.json`
+File name: `0a76a120-80c7-4358-b495-cde8d2873c9d.BOCA-UK.CGP_donor_1635843.CGP_specimen_1704428.WGS-BWA-Normal.json`
 
 File naming convention: `{gnos_id}.{project_code}.{donor_id}.{specimen_id}.{data_type}.json`
 ```
 {
+    "aliquot_id": "fc99c613-51bf-8b47-e040-11ac0d480d34",
     "available_repos": [
-        "https://gtrepo-ebi.annailabs.com/",
-        "https://gtrepo-bsc.annailabs.com/"
+        {
+            "https://gtrepo-ebi.annailabs.com/": {
+                "file_md5sum": "ea6645a55aa63c8864944cb9948e0875",
+                "file_size": 29513
+            }
+        },
+        {
+            "https://gtrepo-bsc.annailabs.com/": {
+                "file_md5sum": "c5cb4d706bbce294e1dd5d6c347c8dde",
+                "file_size": 29514
+            }
+        }
     ],
-    "is_santa_cruz": false,
-    "project_code": "PACA-CA",
-    "submitter_donor_id": "PCSI_0235",
-    "submitter_specimen_id": "PCSI_0235_Ly_R",
-    "submitter_sample_id": "PCSI_0235_Ly_R",
-    "aliquot_id": "7d752281-be08-47c9-ad83-dfcf2347ba5e",
+    "is_santa_cruz": true,
+    "project_code": "BOCA-UK",
     "specimen_type": "Normal - blood derived",
+    "submitter_donor_id": "CGP_donor_1635843",
+    "submitter_specimen_id": "CGP_specimen_1704428",
+    "submitter_sample_id": "PD12423b",
     "data_type": "WGS-BWA-Normal",
-    "gnos_id": "54beeb57-e18e-49de-a49b-b8dc2ac91088",
+    "gnos_id": "0a76a120-80c7-4358-b495-cde8d2873c9d",
     "gnos_repo": [
         "https://gtrepo-bsc.annailabs.com/"
     ],
     "files": [
         {
-            "file_md5sum": "fdac6eb702b99c391c092e25c35ea594",
-            "file_name": "fdac6eb702b99c391c092e25c35ea594.bam",
-            "file_size": 114968925237,
-            "object_id": "936440a1-1679-4401-9963-a6e75315d55d"
+            "file_md5sum": "ae3ea02c1c5d5336a67fa462bfafe908",
+            "file_name": "ae3ea02c1c5d5336a67fa462bfafe908.bam",
+            "file_size": 87988673853,
+            "object_id": "681a7e90-3334-5c41-9808-668e821cede6"
         },
         {
-            "file_md5sum": "c16bedaff311ef8b4c311d9661d030ec",
-            "file_name": "fdac6eb702b99c391c092e25c35ea594.bam.bai",
-            "file_size": 14741520,
-            "object_id": "6e637cd9-de95-4d8f-9a45-776f7e39ff9e"
+            "file_md5sum": "eb9a10931adf198262de58c0d4cbb0df",
+            "file_name": "ae3ea02c1c5d5336a67fa462bfafe908.bam.bai",
+            "file_size": 12719888,
+            "object_id": "cd46989c-0d62-5fb4-9306-06d349065b1b"
         },
         {
-            "file_md5sum": "52ec96b4298843efb05462989676cd37",
-            "file_name": "54beeb57-e18e-49de-a49b-b8dc2ac91088.xml",
-            "file_size": 31573,
-            "object_id": "537088ac-36c0-4387-b204-12cc473ec7c4"
+            "file_md5sum": "c5cb4d706bbce294e1dd5d6c347c8dde",
+            "file_name": "0a76a120-80c7-4358-b495-cde8d2873c9d.xml",
+            "file_size": 29514,
+            "object_id": "b81d4b77-2240-5054-b217-054088f7d3f6"
         }
     ]
 }
