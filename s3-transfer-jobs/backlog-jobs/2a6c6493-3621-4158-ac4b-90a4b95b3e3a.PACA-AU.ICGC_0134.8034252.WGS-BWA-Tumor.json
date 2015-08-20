@@ -1,0 +1,54 @@
+{
+    "aliquot_id": "e56b0990-ff67-47c1-b9ad-87ef1d4aa2ae", 
+    "available_repos": [
+        {
+            "https://gtrepo-bsc.annailabs.com/": {
+                "file_md5sum": "7af1a7e03a26ed899bc73e8abcd787bc", 
+                "file_size": 34304
+            }
+        }, 
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "e0628c39c0355fa2243265152114a53d", 
+                "file_size": 34322
+            }
+        }, 
+        {
+            "https://gtrepo-ebi.annailabs.com/": {
+                "file_md5sum": "f18fad6ca7031658ce0077e188e6c9cb", 
+                "file_size": 34190
+            }
+        }
+    ], 
+    "data_type": "WGS-BWA-Tumor", 
+    "files": [
+        {
+            "file_md5sum": "8d8b3984e857630b439e75c4a67d9685", 
+            "file_name": "8d8b3984e857630b439e75c4a67d9685.bam", 
+            "file_size": 238034352234, 
+            "object_id": "09571ed8-6b36-5fb6-a59f-17493f646815"
+        }, 
+        {
+            "file_md5sum": "59ccc8e19b03f09f420e7c03236eb752", 
+            "file_name": "8d8b3984e857630b439e75c4a67d9685.bam.bai", 
+            "file_size": 24951720, 
+            "object_id": "05e4b963-68f4-5c0b-ad20-d6508c127f7d"
+        }, 
+        {
+            "file_md5sum": "e0628c39c0355fa2243265152114a53d", 
+            "file_name": "2a6c6493-3621-4158-ac4b-90a4b95b3e3a.xml", 
+            "file_size": 34322, 
+            "object_id": "4819c8ed-ef2a-523f-a8fd-4783b6c72766"
+        }
+    ], 
+    "gnos_id": "2a6c6493-3621-4158-ac4b-90a4b95b3e3a", 
+    "gnos_repo": [
+        "https://gtrepo-osdc-icgc.annailabs.com/"
+    ], 
+    "is_santa_cruz": true, 
+    "project_code": "PACA-AU", 
+    "specimen_type": "Primary tumour - solid tissue", 
+    "submitter_donor_id": "ICGC_0134", 
+    "submitter_sample_id": "8034252", 
+    "submitter_specimen_id": "8034252"
+}
