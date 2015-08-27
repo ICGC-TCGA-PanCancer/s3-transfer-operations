@@ -45,6 +45,8 @@ def main():
     for files in json_data[u'files']:
         if str(files[u'file_name']) == (handlebars['analysisid'] + ".xml"):
             handlebars['xmlhash'] = str(files[u'file_md5sum'])
+	    with open("md5check", "w") as f:
+		f.write(str(files[u'file_md5sum']))
     with codecs.open(template, 'r', 'utf-8') as f:
         template_data = f.read()
     # Final INI File
