@@ -17,6 +17,7 @@ current repo.
    * orchestrator examines the backlog JSON in `backlog-jobs`, moves high priority jobs to `queued-jobs`
 * the Launcher VM periodically runs a script that checks out this git repo, loops over jobs in `queued-jobs`, and enqueues them into the workflow order queue system, any previously queued, running, finished, or failed are ignored
     * JSON files should be *sorted ascendingly*, files listed first are to be scheduled first
+    * An MD5 sum check on the GNOS XML data should be performed prior to scheduling a workflow, when mismatch detected, no job should be scheduled and the JSON file will be moved to `failed-jobs` folder with explicit error message
 * queued work on the Launcher eventually triggers the workflow to run on a Worker node, the workflow interacts with git
     * first step is to verify whether GNOS metadata XML has not been altered comparing to when the JSON file was generated. JSON is moved to `verifying-jobs`
     * running workflow moves the JSON to `downloading-jobs`
