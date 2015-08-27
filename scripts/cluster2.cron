@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Bridge between JSON and QUEUING SYSTEM
+# 30 * * * *
+
+git config --global user.name "ICGC AUTOMATION"
+git config --global user.email "nbyrne.oicr@gmail.com"
+
+# Configuration
+export JSON_REPO="/home/ubuntu/gitroot/s3-transfer-operations"
+export REPO_FOLDER="testing"
+
+# Begin Execution
+export JSON_SCRIPTS="${JSON_REPO}/scripts"
+export JSON_QUEUE="${JSON_REPO}/${REPO_FOLDER}/queued-jobs"
+
+# Create the storage bucket for the INI files
+[[ ! -d /home/ubuntu/.gnos/ini-bucket ]] && mkdir /home/ubuntu/.gnos/ini-bucket
+
+# Pull down the s3-transfer-operations repo
+[[ -d /home/ubuntu/gitroot/s3-transfer-operations ]] && rm -rf /home/ubuntu/gitroot/s3-transfer-operations
+[[ ! -d /home/ubuntu/gitroot ]] && mkdir /home/ubuntu/gitroot
+cd /home/ubuntu/gitroot && git clone https://github.com/ICGC-TCGA-PanCancer/s3-transfer-operations.git
+
+# Generate INI Files
+echo "Executing Cron Job ..."
+cd ${JSON_QUEUE}
+/usr/bin/docker run --rm -v /home/ubuntu/pancancer_launcher_config/template_for_json2ini.ini:/gitroot/s3-data-transfer-scripts/template.ini -v /home/ubuntu/pancancer_launcher_config/ini-bucket:/gitroot/ini-bucket -v /home/ubuntu/gitroot/s3-transfer-operations:/gitroot/s3-transfer-operations icgc/s3-data-transfer-scripts bash -c "bash wrapper.sh /gitroot/s3-transfer-operations/${REPO_FOLDER}/queued-jobs /gitroot/ini-bucket"
+errorcode=$?
+
+echo "Cron job complete ..."
+
