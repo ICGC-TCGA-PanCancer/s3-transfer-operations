@@ -88,7 +88,7 @@ def main():
     #print final_data # For debugging
     with codecs.open(os.path.join(output_folder, os.path.basename(json_input)) + ".ini", "w", 'utf-8') as f:
         f.write(final_data)
-
+    print ">>> File written!"
     sys.exit(0)
 
 if __name__ == '__main__':
