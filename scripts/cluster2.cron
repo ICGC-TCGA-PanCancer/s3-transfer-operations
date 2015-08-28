@@ -3,6 +3,9 @@
 # Bridge between JSON and QUEUING SYSTEM
 # 30 * * * *
 
+# Blank ini bucker
+rm /home/ubuntu/ini-bucket/*.ini
+
 # Configuration
 export JSON_REPO="/home/ubuntu/gitroot/s3-transfer-operations"
 export REPO_FOLDER="s3-transfer-jobs-2"
