@@ -79,7 +79,8 @@ def main():
     md5 = handlebars['xmlhash']
     if not md5_valid(url, md5):
         # Error handler for bad JSON file
-        pass
+        print ">>> Bad md5 XML sum in this file!"
+	sys.exit(9)
 
     with codecs.open(template, 'r', 'utf-8') as f:
         template_data = f.read()
