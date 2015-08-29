@@ -4,7 +4,7 @@
 # 30 * * * *
 
 # FLOCK this mofo
-pidfile='auto.lock'
+pidfile='json2ini.lock'
 exec 200>$pidfile
 flock -n 200 || exit 1
 pid=$$
