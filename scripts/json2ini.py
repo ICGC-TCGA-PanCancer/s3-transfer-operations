@@ -46,20 +46,19 @@ def main():
 
     # Fail to generate ini if the gnos-server is not in the whitelist:
     with open(REPO_WHITELIST) as f:
-	whitelist = f.read().split('\n')
+        whitelist = f.read().strip().split('\n')
     whitelisted = False
     for repo in whitelist:
-	print repo
-	if repo[0] == "#":
-		continue
-	else:
-		if repo.strip() in handlebars['gnosserver']:
-			whitelisted = True
-			break
+        if repo[0] == "#":
+                continue
+        else:
+                if repo.strip() in handlebars['gnosserver']:
+                        whitelisted = True
+                        break
 
     if not whitelisted:
-	print "Not producing an INI file for this JSON as the repo is not whitelisted."
-	sys.exit(1)
+        print "Not producing an INI file for this JSON as the repo is not whitelisted."
+        sys.exit(1)
 
     # Make the final hash substitution
     for files in json_data[u'files']:
