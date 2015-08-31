@@ -33,7 +33,7 @@ The process above is repeated until the all JSON files (all Jobs) are moved to `
 
 * All git operations by the workflow must be done on the `master` branch.
 
-* Each JSON file movement should be performed as a sequence of git commands: `git checkout master && git reset --hard origin/master && git fetch --all && git mv .... && git commit -m 'step name: json_file_name' && git push`. Replace mv .... with real json move syntax.
+* Each JSON file movement should be performed as a sequence of git commands: `git checkout master && git reset --hard origin/master && git pull && git mv .... && git commit -m 'step name: json_file_name' && git push`. Replace mv .... with real json move syntax.
 
 * The above sequence of git commands is considered to be an 'atomic' transactional operation. Failure in any of the commands will likely leave git repo in a state that could cause problems. A re-try will clear up the bad state (by removing all local changes) and hopefully get the desired git operations completed as well.
 

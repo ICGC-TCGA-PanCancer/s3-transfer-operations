@@ -3,6 +3,16 @@
 # Bridge between JSON and QUEUING SYSTEM
 # 30 * * * *
 
+# FLOCK this mofo
+pidfile='json2ini.lock'
+exec 200>$pidfile
+flock -n 200 || exit 1
+pid=$$
+echo $pid 1>&200
+
+# Blank ini bucker
+rm /home/ubuntu/ini-bucket/*.ini
+
 # Configuration
 export JSON_REPO="/home/ubuntu/gitroot/s3-transfer-operations"
 export REPO_FOLDER="s3-transfer-jobs-2"
@@ -10,6 +20,7 @@ export REPO_FOLDER="s3-transfer-jobs-2"
 # Begin Execution
 export JSON_SCRIPTS="${JSON_REPO}/scripts"
 export JSON_QUEUE="${JSON_REPO}/${REPO_FOLDER}/queued-jobs"
+export JSON_FAIL="${JSON_REPO}/${REPO_FOLDER}/failed-jobs"
 
 # Create the storage bucket for the INI files
 [[ ! -d /home/ubuntu/ini-bucket ]] && mkdir /home/ubuntu/ini-bucket
@@ -26,6 +37,20 @@ for x in *.json
 do
 	echo "Generating $x ..."
 	/usr/bin/python /home/ubuntu/s3-transfer-operations/scripts/json2ini_md5.py $x /home/ubuntu/s3-transfer-operations/scripts/template1.0.9.ini /home/ubuntu/ini-bucket
+	if [[ $? -eq 9 ]]; then
+		echo "    ERROR: THIS JSON FILE CONTAINS A BAD XML MD5 SUM, DO NOT SCHEDULE THIS WORKFLOW!"
+		while true; do
+			git reset --hard HEAD
+			git pull
+			git mv $x ../failed-jobs
+			git commit -m "BAD MD5 SUM"
+			git push
+			if [[ $? -eq 0 ]]; then
+				break
+			fi
+		done	
+	fi
+
 done
 
 echo "Cron job complete ..."

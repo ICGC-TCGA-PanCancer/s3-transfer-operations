@@ -11,6 +11,9 @@ import urllib2
 # USAGE: json2ini.py [input json file] [output folder]
 # Creates an ini file in the designated output folder
 
+# Constants
+REPO_WHITELIST="/home/ubuntu/s3-transfer-operations/repo-whitelist.txt"
+
 def md5_valid(url, md5):
 
     # Fetch Metadata
@@ -69,6 +72,22 @@ def main():
     # Fix the gnos server output to be compatible with ini file format
     handlebars['gnosserver'] = str(','.join(json_data[u'gnos_repo']))
 
+    # Fail to generate ini if the gnos-server is not in the whitelist:
+    with open(REPO_WHITELIST) as f:
+	whitelist = f.read().strip().split('\n')
+    whitelisted = False
+    for repo in whitelist:
+	if repo[0] == "#":
+		continue
+	else:
+		if repo.strip() in handlebars['gnosserver']:
+			whitelisted = True
+			break
+
+    if not whitelisted:
+	print "Not producing an INI file for this JSON as the repo is not whitelisted."
+	sys.exit(1)
+
     # Make the final hash substitution
     for files in json_data[u'files']:
         if str(files[u'file_name']) == (handlebars['analysisid'] + ".xml"):
@@ -79,7 +98,8 @@ def main():
     md5 = handlebars['xmlhash']
     if not md5_valid(url, md5):
         # Error handler for bad JSON file
-        pass
+        print ">>> Bad md5 XML sum in this file!"
+	sys.exit(9)
 
     with codecs.open(template, 'r', 'utf-8') as f:
         template_data = f.read()
