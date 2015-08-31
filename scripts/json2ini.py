@@ -10,6 +10,9 @@ import sys
 # USAGE: json2ini.py [input json file] [output folder]
 # Creates an ini file in the designated output folder
 
+# Constants
+REPO_WHITELIST="/home/ubuntu/s3-transfer-operations/repo-whitelist.txt"
+
 def main():
     json_input = sys.argv[1]
     template = sys.argv[2]
@@ -40,6 +43,23 @@ def main():
 
     # Fix thhe gnos server output to be compatible with ini file format
     handlebars['gnosserver'] = str(','.join(json_data[u'gnos_repo']))
+
+    # Fail to generate ini if the gnos-server is not in the whitelist:
+    with open(REPO_WHITELIST) as f:
+	whitelist = f.read().split('\n').strip()
+    whitelisted = False
+    for repo in whitelist:
+	print repo
+	if repo[0] == "#"
+		continue
+	else:
+		if repo in handlebars['gnosserver']:
+			whitelisted = True
+			break
+
+    if not whitelisted:
+	print "Not producing an INI file for this JSON as the repo is not whitelisted."
+	sys.exit(1)
 
     # Make the final hash substitution
     for files in json_data[u'files']:
