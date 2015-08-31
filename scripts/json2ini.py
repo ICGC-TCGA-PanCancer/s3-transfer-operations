@@ -46,14 +46,14 @@ def main():
 
     # Fail to generate ini if the gnos-server is not in the whitelist:
     with open(REPO_WHITELIST) as f:
-	whitelist = f.read().split('\n').strip()
+	whitelist = f.read().split('\n')
     whitelisted = False
     for repo in whitelist:
 	print repo
 	if repo[0] == "#":
 		continue
 	else:
-		if repo in handlebars['gnosserver']:
+		if repo.strip() in handlebars['gnosserver']:
 			whitelisted = True
 			break
 
