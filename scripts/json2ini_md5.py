@@ -78,7 +78,7 @@ def main():
     whitelisted = False
     for repo in whitelist:
 	print repo
-	if repo[0] == "#"
+	if repo[0] == "#":
 		continue
 	else:
 		if repo in handlebars['gnosserver']:
