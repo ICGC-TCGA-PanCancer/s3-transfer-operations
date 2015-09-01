@@ -65,9 +65,6 @@ except Exception as e:
 curs.close()
 conn.close()
 
-# Pull the local git repos
-# ...
-
 # Attempt to Find Files in Git Tracking Repos
 git_instrs = []
 git_instrs.append(['git', 'checkout', 'master'])
