@@ -5,19 +5,18 @@ import psycopg2
 
 aparser = argparse.ArgumentParser(
     description='Determine the reason that a job has failed, and then move ' \
-                'it to failed-jobs.')
-aparser.add_argument('-s', '--search', dest='search', metavar='suffix',
+                'it to failed-jobs (or some other queue).')
+aparser.add_argument('-s', '--search', dest='search', metavar='search_term',
     type=str, default='',
     help='a string to match in the failed job\'s stdout log.')
-aparser.add_argument('-r', '--reason', dest='reason', metavar='suffix',
+aparser.add_argument('-r', '--reason', dest='reason', metavar='failure_reason',
     type=str, default='unspecified',
-    help='the failure reason for the search parameter.')
-aparser.add_argument('-d', '--dest', dest='dest_queue', metavar='suffix',
+    help='the failure reason corresponding to the search parameter.')
+aparser.add_argument('-d', '--dest', dest='dest_queue', metavar='dest_queue',
     default='failed-jobs', type=str,
-    help='the destination queue to move the failed job to.')
+    help='the destination queue to move the JSON file to.')
 aparser.add_argument('-f', '--force', dest='force', action='store_true',
-    help='do not prompt for verification when a job\'s reason for failure is ' \
-            '\'unknown\'.')
+    help='do not prompt for verification.')
 aparser.add_argument('-os', '--oscript', dest='script', action='store_true',
     help='output the git commands as a script.')
 args = aparser.parse_args()
