@@ -82,9 +82,12 @@ git_instrs = []
 git_instrs.append(['git', 'checkout', 'master'])
 git_instrs.append(['git', 'reset', '--hard', 'origin/master'])
 git_instrs.append(['git', 'pull'])
+json_filename_cache = [] # Remove Duplicate Job Entries (Previous Failures)
 for job in failed_jobs:
     matchObj = re.search(r'"JSONfileName"\s*:\s*"([\w\.\-]*)"', job[3])
     json_filename = matchObj.group(1)
+    if json_filename in json_filename_cache: continue
+    json_filename_cache.append(json_filename)
     for root, subdirs, files in os.walk(S3TJ_ROOT_DIR + S3TJ_SYS_DIR):
         if ((json_filename in files) and
                 not(root.endswith('backlog-jobs') or
@@ -94,23 +97,31 @@ for job in failed_jobs:
             matchObj = re.search(r'^.*/(.*)$', root)
             job_stage = matchObj.group(1)
             fail_reason = getFailureReason(job[3], job[4], job[5])
+            dest_queue = args.dest_queue
             if ((args.search == '') or
                     ((args.search != '') and (fail_reason == args.reason))):
                 if not(args.script):
                     print('[Job ID: {}]'.format(str(job[0])))
-                    print('IP Address: {} (possibly inactive)'.format(job[8]))
-                    print('Found corresponding JSON file in an inconsistent ' \
-                            'stage ({}).'.format(job_stage))
+                    print('-> IP Address: {} (possibly inactive)'
+                            .format(job[8]))
+                    print('-> Found corresponding JSON file in an ' \
+                            'inconsistent stage ({}).'.format(job_stage))
                     if not(args.force):
-                        fail_reason_in = input('Failure Reason ({}): '
+                        fail_reason_in = input('-> Failure Reason ({}): '
                                         .format(fail_reason))
                         if fail_reason_in != '':
                             fail_reason = fail_reason_in
+                        dest_queue_in = input('-> Destination Queue ({}): '
+                                        .format(dest_queue))
+                        if dest_queue_in != '':
+                            dest_queue = dest_queue_in
                     else:
-                        print('Failure Reason: {}'.format(fail_reason))
+                        print('-> Failure Reason: {}'.format(fail_reason))
+                        print('-> Destination Queue: {}'.format(dest_queue))
 
-                src_path = os.path.join(root, json_filename)
-                dest_path = S3TJ_ROOT_DIR + S3TJ_SYS_DIR + args.dest_queue + '/'
+                src_path = './' + os.path.join(root[len(S3TJ_ROOT_DIR):],
+                                        json_filename)
+                dest_path = './' + S3TJ_SYS_DIR + args.dest_queue + '/'
                 commit_msg = '[Failed] {} ({}): {}'.format(job_stage,
                                                         fail_reason,
                                                         json_filename)
@@ -119,7 +130,7 @@ for job in failed_jobs:
             break
 git_instrs.append(['git', 'push'])
 
-# Execute Git Instructions
+# Print or Execute Git Instructions
 if args.script:
     if len(git_instrs) > 4:
         for instr in git_instrs:
@@ -131,7 +142,8 @@ if args.script:
             print('')
 else:
     if len(git_instrs) > 4:
-        print('Execution is disabled in the code.')
+        print('Execution is disabled in the code. Run with \'-os\' flag to ' \
+                'output script to console.')
         # try:
         #     print('Executing Git instructions... ', end='')
         #     subprocess.check_call(instr, stdout=open(os.devnull, 'w'),
@@ -140,4 +152,4 @@ else:
         # except CalledProcessError:
         #     sys.exit('[Fatal Error] Git returned a non-zero status code.')
     else:
-        print('No inconsistent failed jobs, nothing to do.')
+        print('No failed jobs found in active queues, nothing to do.')
