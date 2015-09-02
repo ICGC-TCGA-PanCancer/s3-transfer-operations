@@ -6,10 +6,20 @@ import psycopg2
 aparser = argparse.ArgumentParser(
     description='Determine the reason that a job has failed, and then move ' \
                 'it to failed-jobs.')
-
+aparser.add_argument('-s', '--search', dest='search', metavar='suffix',
+    type=str, default='',
+    help='a string to match in the failed job\'s stdout log.')
+aparser.add_argument('-r', '--reason', dest='reason', metavar='suffix',
+    type=str, default='unspecified',
+    help='the failure reason for the search parameter.')
+aparser.add_argument('-d', '--dest', dest='dest_queue', metavar='suffix',
+    default='failed-jobs', type=str,
+    help='the destination queue to move the failed job to.')
 aparser.add_argument('-f', '--force', dest='force', action='store_true',
     help='do not prompt for verification when a job\'s reason for failure is ' \
             '\'unknown\'.')
+aparser.add_argument('-os', '--oscript', dest='script', action='store_true',
+    help='output the git commands as a script.')
 args = aparser.parse_args()
 
 # Configuration
@@ -22,11 +32,13 @@ DB_NAME='queue_status'
 
 # Return a Failure Reason (Commit Message)
 def getFailureReason(ini, stdout, stderr):
+    if (args.search != '') and (args.search in stdout):
+        return 'unspecified' if (args.reason == 'unknown') else args.reason
     # EBI Repos Failure (2015-09-01)
     matchObj = re.search(r'"gnosServers"\s*:\s*"([\w\.\-\\/:]*)"', ini)
     if matchObj is not None:
         orig_match = 'gtrepo-ebi.annailabs.com' in matchObj.group(1)
-    if orig_match:
+    if orig_match: #and stdout_match
         return 'EBI Repos Failure'
     # Cannot Determine Cause
     return 'unknown'
@@ -36,10 +48,10 @@ os.chdir(S3TJ_ROOT_DIR)
 
 # Pull s3-transfer-operations Git Repository
 try:
-    print('Updating git repository... ', end='')
+    if not(args.script): print('Updating git repository... ', end='')
     subprocess.check_call(['git', 'pull'], stdout=open(os.devnull, 'w'),
                             stderr=open(os.devnull, 'w'))
-    print('Done.')
+    if not(args.script): print('Done.')
 except CalledProcessError:
     sys.exit('[Fatal Error] Git returned a non-zero status code.')
 
@@ -71,49 +83,61 @@ git_instrs.append(['git', 'checkout', 'master'])
 git_instrs.append(['git', 'reset', '--hard', 'origin/master'])
 git_instrs.append(['git', 'pull'])
 for job in failed_jobs:
-    matchObj = re.search(r'"JSONfileName"\s*:\s*"(.*\.json)"', job[3])
+    matchObj = re.search(r'"JSONfileName"\s*:\s*"([\w\.\-]*)"', job[3])
     json_filename = matchObj.group(1)
     for root, subdirs, files in os.walk(S3TJ_ROOT_DIR + S3TJ_SYS_DIR):
         if ((json_filename in files) and
-                not(root.endswith('queued-jobs') or
+                not(root.endswith('backlog-jobs') or
+                    root.endswith('queued-jobs') or
                     root.endswith('failed-jobs') or
                     root.endswith('completed-jobs'))):
             matchObj = re.search(r'^.*/(.*)$', root)
             job_stage = matchObj.group(1)
-            print('[Job ID: {}]'.format(str(job[0])))
-            print('IP Address: {} (possibly inactive)'.format(job[8]))
-            print('Found corresponding JSON file in an inconsistent stage ({}).'
-                .format(job_stage))
             fail_reason = getFailureReason(job[3], job[4], job[5])
-            if not(args.force):
-                fail_reason_in = input('Failure Reason ({}): '
-                                .format(fail_reason))
-                if fail_reason_in != '':
-                    fail_reason = fail_reason_in
-            else:
-                print('Failure Reason: {}'.format(fail_reason))
+            if ((args.search == '') or
+                    ((args.search != '') and (fail_reason == args.reason))):
+                if not(args.script):
+                    print('[Job ID: {}]'.format(str(job[0])))
+                    print('IP Address: {} (possibly inactive)'.format(job[8]))
+                    print('Found corresponding JSON file in an inconsistent ' \
+                            'stage ({}).'.format(job_stage))
+                    if not(args.force):
+                        fail_reason_in = input('Failure Reason ({}): '
+                                        .format(fail_reason))
+                        if fail_reason_in != '':
+                            fail_reason = fail_reason_in
+                    else:
+                        print('Failure Reason: {}'.format(fail_reason))
 
-            src_path = os.path.join(root, json_filename)
-            dest_path = S3TJ_ROOT_DIR + S3TJ_SYS_DIR + 'failed-jobs/'
-            commit_msg = '[Failed] {} ({}): {}'.format(job_stage,
-                                                    fail_reason,
-                                                    json_filename)
-            git_instrs.append(['git', 'mv', src_path, dest_path])
-            git_instrs.append(['git', 'commit', '-m', commit_msg])
+                src_path = os.path.join(root, json_filename)
+                dest_path = S3TJ_ROOT_DIR + S3TJ_SYS_DIR + args.dest_queue + '/'
+                commit_msg = '[Failed] {} ({}): {}'.format(job_stage,
+                                                        fail_reason,
+                                                        json_filename)
+                git_instrs.append(['git', 'mv', src_path, dest_path])
+                git_instrs.append(['git', 'commit', '-m', commit_msg])
             break
 git_instrs.append(['git', 'push'])
 
 # Execute Git Instructions
-print('------------------------------------------------------------')
-print('-- Simulated Instructions (nothing actually being run):   --')
-print('-- Note: Spaces in arguments will be properly handled.    --')
-print('------------------------------------------------------------')
-for instr in git_instrs:
-    print(' '.join(instr))
-    # try:
-    #     print('Executing Git instructions... ', end='')
-    #     subprocess.check_call(instr, stdout=open(os.devnull, 'w'),
-    #                             stderr=open(os.devnull, 'w'))
-    #     print('Done.')
-    # except CalledProcessError:
-    #     sys.exit('[Fatal Error] Git returned a non-zero status code.')
+if args.script:
+    if len(git_instrs) > 4:
+        for instr in git_instrs:
+            for arg in instr:
+                if ' ' in arg:
+                    print('\'{}\''.format(arg), end=' ')
+                else:
+                    print('{}'.format(arg), end=' ')
+            print('')
+else:
+    if len(git_instrs) > 4:
+        print('Execution is disabled in the code.')
+        # try:
+        #     print('Executing Git instructions... ', end='')
+        #     subprocess.check_call(instr, stdout=open(os.devnull, 'w'),
+        #                             stderr=open(os.devnull, 'w'))
+        #     print('Done.')
+        # except CalledProcessError:
+        #     sys.exit('[Fatal Error] Git returned a non-zero status code.')
+    else:
+        print('No inconsistent failed jobs, nothing to do.')
