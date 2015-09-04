@@ -11,7 +11,7 @@ import sys
 # Creates an ini file in the designated output folder
 
 # Constants
-REPO_WHITELIST="/home/ubuntu/s3-transfer-operations/repo-whitelist.txt"
+REPO_WHITELIST="/home/ubuntu/gitroot/s3-transfer-operations/repo-whitelist.txt"
 
 def main():
     json_input = sys.argv[1]

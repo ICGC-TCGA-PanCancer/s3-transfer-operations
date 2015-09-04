@@ -12,7 +12,7 @@ import urllib2
 # Creates an ini file in the designated output folder
 
 # Constants
-REPO_WHITELIST="/home/ubuntu/s3-transfer-operations/repo-whitelist.txt"
+REPO_WHITELIST="/home/ubuntu/gitroot/s3-transfer-operations/repo-whitelist.txt"
 
 def md5_valid(url, md5):
 
