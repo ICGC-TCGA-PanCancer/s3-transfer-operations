@@ -39,6 +39,18 @@ def getFailureReason(ini, stdout, stderr):
         orig_match = 'gtrepo-ebi.annailabs.com' in matchObj.group(1)
     if orig_match: #and stdout_match
         return 'EBI Repos Failure'
+    # BSC Repos Failure (2015-09-08)
+    matchObj = re.search(r'"gnosServers"\s*:\s*"([\w\.\-\\/:]*)"', ini)
+    if matchObj is not None:
+        orig_match = 'gtrepo-bsc.annailabs.com' in matchObj.group(1)
+    if orig_match: #and stdout_match
+        return 'BSC Repos Failure'
+    # OSDC Repos Failure (2015-09-08)
+    matchObj = re.search(r'"gnosServers"\s*:\s*"([\w\.\-\\/:]*)"', ini)
+    if matchObj is not None:
+        orig_match = 'gtrepo-osdc-icgc.annailabs.com' in matchObj.group(1)
+    if orig_match: #and stdout_match
+        return 'OSDC Repos Failure'
     # Cannot Determine Cause
     return 'unknown'
 
@@ -75,6 +87,8 @@ except Exception as e:
     sys.exit('[Fatal Error] {}.'.format(str(e)))
 curs.close()
 conn.close()
+
+failure_count = 0
 
 # Attempt to Find Files in Git Tracking Repos
 git_instrs = []
@@ -126,8 +140,10 @@ for job in failed_jobs:
                                                         json_filename)
                 git_instrs.append(['git', 'mv', src_path, dest_path])
                 git_instrs.append(['git', 'commit', '-m', commit_msg])
+                failure_count += 1
             break
 git_instrs.append(['git', 'push'])
+if not(args.script): print('Total Failed Jobs: {}'.format(failure_count))
 
 # Print or Execute Git Instructions
 if args.script:
