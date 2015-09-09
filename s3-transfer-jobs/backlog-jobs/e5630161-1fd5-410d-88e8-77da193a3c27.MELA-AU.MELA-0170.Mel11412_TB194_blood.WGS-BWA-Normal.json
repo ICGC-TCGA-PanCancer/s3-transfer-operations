@@ -1,0 +1,54 @@
+{
+    "aliquot_id": "31d9e622-3d11-4d25-9465-50af0c699864", 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "ccdcb08c213504a65ec47087d7ad2f5b", 
+                "file_size": 29654
+            }
+        }, 
+        {
+            "https://gtrepo-bsc.annailabs.com/": {
+                "file_md5sum": "2da3744c4ed692843423cc3e908078c6", 
+                "file_size": 29637
+            }
+        }, 
+        {
+            "https://gtrepo-ebi.annailabs.com/": {
+                "file_md5sum": "0f402870b661787bd4fbec7a55a6eba6", 
+                "file_size": 29529
+            }
+        }
+    ], 
+    "data_type": "WGS-BWA-Normal", 
+    "files": [
+        {
+            "file_md5sum": "e7e9bd2bdf357ee0481d99fc823bca98", 
+            "file_name": "e7e9bd2bdf357ee0481d99fc823bca98.bam", 
+            "file_size": 120536632142, 
+            "object_id": "6f49b489-70aa-59b5-9517-60c0ea7a2c85"
+        }, 
+        {
+            "file_md5sum": "a2ed4d30e59f9157faeca1c9c86afcf3", 
+            "file_name": "e7e9bd2bdf357ee0481d99fc823bca98.bam.bai", 
+            "file_size": 13160048, 
+            "object_id": "4f129ad0-de0b-5c34-999b-7af6c6ee1219"
+        }, 
+        {
+            "file_md5sum": "0f402870b661787bd4fbec7a55a6eba6", 
+            "file_name": "e5630161-1fd5-410d-88e8-77da193a3c27.xml", 
+            "file_size": 29529, 
+            "object_id": "21ba2ec7-3d27-5ce5-a620-5ef004065cfe"
+        }
+    ], 
+    "gnos_id": "e5630161-1fd5-410d-88e8-77da193a3c27", 
+    "gnos_repo": [
+        "https://gtrepo-ebi.annailabs.com/"
+    ], 
+    "is_santa_cruz": false, 
+    "project_code": "MELA-AU", 
+    "specimen_type": "Normal - blood derived", 
+    "submitter_donor_id": "MELA-0170", 
+    "submitter_sample_id": "EXTERN-MELA-20140526-021", 
+    "submitter_specimen_id": "Mel11412_TB194_blood"
+}
