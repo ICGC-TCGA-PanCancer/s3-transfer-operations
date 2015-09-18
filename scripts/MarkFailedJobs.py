@@ -81,12 +81,11 @@ try:
     curs.execute('SELECT j.job_id, j.status, j.job_hash, j.ini, j.stdout, ' \
         'j.stderr, p.provision_id, p.provision_uuid, p.ip_address ' \
         'FROM job j, provision p ' \
-        'WHERE j.job_uuid = p.job_uuid and j.status = \'FAILED\'')
+        'WHERE j.job_uuid = p.job_uuid ' \
+        'AND j.status IN (\'LOST\', \'FAILED\')')
     failed_jobs = curs.fetchall()
 except Exception as e:
     sys.exit('[Fatal Error] {}.'.format(str(e)))
-curs.close()
-conn.close()
 
 failure_count = 0
 
@@ -95,12 +94,26 @@ git_instrs = []
 git_instrs.append(['git', 'checkout', 'master'])
 git_instrs.append(['git', 'reset', '--hard', 'origin/master'])
 git_instrs.append(['git', 'pull'])
-json_filename_cache = [] # Remove Duplicate Job Entries (Previous Failures)
+json_filenames = []
 for job in failed_jobs:
     matchObj = re.search(r'"JSONfileName"\s*:\s*"([\w\.\-]*)"', job[3])
     json_filename = matchObj.group(1)
-    if json_filename in json_filename_cache: continue
-    json_filename_cache.append(json_filename)
+
+    # Remove if Duplicate of Previous Failure
+    if json_filename in json_filenames: continue
+    json_filenames.append(json_filename)
+
+    # Remove if Re-run of Job Active
+    try:
+        curs.execute('SELECT COUNT(ini) FROM job ' \
+            'WHERE ini LIKE \'%{}%\'' \
+            'AND status NOT IN (\'LOST\', \'FAILED\')'.format(json_filename))
+        active_count = curs.fetchone()[0]
+    except Exception as e:
+        sys.exit('[Fatal Error] {}.'.format(str(e)))
+    if active_count > 0: continue
+
+    # Search for File in Subqueues
     for root, subdirs, files in os.walk(S3TJ_ROOT_DIR + S3TJ_SYS_DIR):
         if ((json_filename in files) and
                 not(root.endswith('backlog-jobs') or
@@ -144,6 +157,10 @@ for job in failed_jobs:
             break
 git_instrs.append(['git', 'push'])
 if not(args.script): print('Total Failed Jobs: {}'.format(failure_count))
+
+# Close DB Connection
+curs.close()
+conn.close()
 
 # Print or Execute Git Instructions
 if args.script:
