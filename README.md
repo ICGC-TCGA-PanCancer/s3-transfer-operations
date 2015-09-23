@@ -10,6 +10,14 @@ current repo.
 
 ## SOP
 
+### Queue Information
+
+s3-transfer-jobs-prod1: For BAM files, consumed by m1.xlarge (4x420 GB Disk) worker instances.
+
+s3-transfer-jobs-prod2: For VCF files, consumed by m1.small (120 GB Disk) worker instances.
+
+s3-transfer-jobs-staging: For testing, do not schedule general tasks here.
+
 ### Major steps
 
 * bulk generation script that queries the ES index on pancancer.info, metadata service (to get object IDs) and a project whitelist from the orchestrator (Junjun for the bulk script, Christina for project whitelist. Should start with Santa Cruz items).
