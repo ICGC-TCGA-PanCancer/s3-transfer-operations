@@ -1,0 +1,63 @@
+{
+    "_runs_": {
+        "run_1446005425_b656b339-5d01-4a8e-9a46-96aaa1b02e91": {
+            "downloading": {
+                "gnos-download_time": 15242, 
+                "start": 1446146170, 
+                "stop": 1446161413, 
+                "time": 15243
+            }, 
+            "uploading": {
+                "start": 1446161417, 
+                "stop": 1446161423, 
+                "time": 6
+            }
+        }
+    }, 
+    "aliquot_id": "b18fa3bd-9a78-405f-ae43-8b07d55199e7", 
+    "available_repos": [
+        {
+            "https://gtrepo-bsc.annailabs.com/": {
+                "file_md5sum": "689bc046be81d05723a68996d45d688e", 
+                "file_size": 52290
+            }
+        }, 
+        {
+            "https://gtrepo-ebi.annailabs.com/": {
+                "file_md5sum": "3246fc831fc2042fa90ed46d3d77393c", 
+                "file_size": 52140
+            }
+        }
+    ], 
+    "data_type": "WGS-BWA-Normal", 
+    "files": [
+        {
+            "file_md5sum": "df65ab1fef53817c8098df23c76c076f", 
+            "file_name": "df65ab1fef53817c8098df23c76c076f.bam", 
+            "file_size": 81043260035, 
+            "object_id": "d369d3c7-b9da-5c07-b2bc-c9c46e80832b"
+        }, 
+        {
+            "file_md5sum": "0934ac1dee34b08beb39f37edf1a6bd7", 
+            "file_name": "df65ab1fef53817c8098df23c76c076f.bam.bai", 
+            "file_size": 11247480, 
+            "object_id": "c87af401-c76f-5966-905d-02e5d13837c5"
+        }, 
+        {
+            "file_md5sum": "689bc046be81d05723a68996d45d688e", 
+            "file_name": "e7585c08-6f23-4bf9-b3a5-b6aae0a1f94b.xml", 
+            "file_size": 52290, 
+            "object_id": "3a861f61-2104-594f-b522-4de849a76528"
+        }
+    ], 
+    "gnos_id": "e7585c08-6f23-4bf9-b3a5-b6aae0a1f94b", 
+    "gnos_repo": [
+        "https://gtrepo-bsc.annailabs.com/"
+    ], 
+    "is_santa_cruz": true, 
+    "project_code": "CLLE-ES", 
+    "specimen_type": "Normal - blood derived", 
+    "submitter_donor_id": "39", 
+    "submitter_sample_id": "039-0076-03ND", 
+    "submitter_specimen_id": "039-0076-03ND"
+}

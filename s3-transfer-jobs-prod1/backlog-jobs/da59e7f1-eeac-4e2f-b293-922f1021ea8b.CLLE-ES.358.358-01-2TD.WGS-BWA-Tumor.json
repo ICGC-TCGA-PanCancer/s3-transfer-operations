@@ -1,0 +1,64 @@
+{
+    "_runs_": {
+        "run_1446005823_38074664-71e8-4e1f-b84f-80d1fdf42359": {
+            "downloading": {
+                "gnos-download_time": 7, 
+                "start": 1446192498, 
+                "stop": 1446192507, 
+                "time": 9
+            }, 
+            "uploading": {
+                "start": 1446192509, 
+                "stop": 1446195027, 
+                "time": 2518, 
+                "upload_time": 2518
+            }
+        }
+    }, 
+    "aliquot_id": "c00d925a-ca4d-4561-a8f2-d4542f218086", 
+    "available_repos": [
+        {
+            "https://gtrepo-bsc.annailabs.com/": {
+                "file_md5sum": "e19c6d3970ff0272f9c415d37e13b1be", 
+                "file_size": 52301
+            }
+        }, 
+        {
+            "https://gtrepo-ebi.annailabs.com/": {
+                "file_md5sum": "f3a0ca2d056e686e67075035641c3bc1", 
+                "file_size": 52151
+            }
+        }
+    ], 
+    "data_type": "WGS-BWA-Tumor", 
+    "files": [
+        {
+            "file_md5sum": "474bc28f7c81572c872e5d188cde4b11", 
+            "file_name": "474bc28f7c81572c872e5d188cde4b11.bam", 
+            "file_size": 87173405177, 
+            "object_id": "97ee88bb-3ab4-5219-a6a6-e42f4f0276fc"
+        }, 
+        {
+            "file_md5sum": "8510e4b56be5ceba0451d23fcff35325", 
+            "file_name": "474bc28f7c81572c872e5d188cde4b11.bam.bai", 
+            "file_size": 11961640, 
+            "object_id": "c9988622-bdfc-5353-a05a-887552aecc06"
+        }, 
+        {
+            "file_md5sum": "e19c6d3970ff0272f9c415d37e13b1be", 
+            "file_name": "da59e7f1-eeac-4e2f-b293-922f1021ea8b.xml", 
+            "file_size": 52301, 
+            "object_id": "2df27b88-b559-591a-9f99-fa9b154414b8"
+        }
+    ], 
+    "gnos_id": "da59e7f1-eeac-4e2f-b293-922f1021ea8b", 
+    "gnos_repo": [
+        "https://gtrepo-bsc.annailabs.com/"
+    ], 
+    "is_santa_cruz": true, 
+    "project_code": "CLLE-ES", 
+    "specimen_type": "Primary tumour - blood derived (peripheral blood)", 
+    "submitter_donor_id": "358", 
+    "submitter_sample_id": "358-01-2TD", 
+    "submitter_specimen_id": "358-01-2TD"
+}

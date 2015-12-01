@@ -1,0 +1,64 @@
+{
+    "_runs_": {
+        "run_1446005793_c604a8d5-409f-43fc-b122-124943a9136c": {
+            "downloading": {
+                "gnos-download_time": 2, 
+                "start": 1446193135, 
+                "stop": 1446193138, 
+                "time": 3
+            }, 
+            "uploading": {
+                "start": 1446193142, 
+                "stop": 1446195946, 
+                "time": 2804, 
+                "upload_time": 2804
+            }
+        }
+    }, 
+    "aliquot_id": "1b9510c5-d376-4af9-a043-707df3e4fc5c", 
+    "available_repos": [
+        {
+            "https://gtrepo-bsc.annailabs.com/": {
+                "file_md5sum": "f1434958e01ea01d87eba3587641b23c", 
+                "file_size": 54002
+            }
+        }, 
+        {
+            "https://gtrepo-ebi.annailabs.com/": {
+                "file_md5sum": "7daeb5da3530e05c8ce4ab1bc5432c2a", 
+                "file_size": 53849
+            }
+        }
+    ], 
+    "data_type": "WGS-BWA-Normal", 
+    "files": [
+        {
+            "file_md5sum": "aaceef6fd91f281c8e78bbc2015b5e94", 
+            "file_name": "aaceef6fd91f281c8e78bbc2015b5e94.bam", 
+            "file_size": 82253931782, 
+            "object_id": "a17e083c-ad9a-5b9f-8fd5-aa21501c54c2"
+        }, 
+        {
+            "file_md5sum": "034d0ecc05d26ff29e97ca5c406db8d8", 
+            "file_name": "aaceef6fd91f281c8e78bbc2015b5e94.bam.bai", 
+            "file_size": 12042904, 
+            "object_id": "fc7e512b-dc9f-5678-8f6e-e3111730f1ce"
+        }, 
+        {
+            "file_md5sum": "f1434958e01ea01d87eba3587641b23c", 
+            "file_name": "a81f6c9e-697c-40b5-86bd-38362f5701fe.xml", 
+            "file_size": 54002, 
+            "object_id": "8cfb0a40-f82d-57f7-8e8f-87b95eeddb9b"
+        }
+    ], 
+    "gnos_id": "a81f6c9e-697c-40b5-86bd-38362f5701fe", 
+    "gnos_repo": [
+        "https://gtrepo-bsc.annailabs.com/"
+    ], 
+    "is_santa_cruz": true, 
+    "project_code": "CLLE-ES", 
+    "specimen_type": "Normal - blood derived", 
+    "submitter_donor_id": "654", 
+    "submitter_sample_id": "654-02-1ND", 
+    "submitter_specimen_id": "654-02-1ND"
+}

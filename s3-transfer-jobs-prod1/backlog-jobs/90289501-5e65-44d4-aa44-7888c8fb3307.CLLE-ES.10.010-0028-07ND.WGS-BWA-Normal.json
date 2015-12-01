@@ -1,0 +1,64 @@
+{
+    "_runs_": {
+        "run_1446006165_90720691-f618-405b-bb68-8c2afcbf2d4d": {
+            "downloading": {
+                "gnos-download_time": 3, 
+                "start": 1446185835, 
+                "stop": 1446185839, 
+                "time": 4
+            }, 
+            "uploading": {
+                "start": 1446185842, 
+                "stop": 1446185865, 
+                "time": 23, 
+                "upload_time": 23
+            }
+        }
+    }, 
+    "aliquot_id": "b7284d1b-7822-44e4-b887-508eeda8dee3", 
+    "available_repos": [
+        {
+            "https://gtrepo-bsc.annailabs.com/": {
+                "file_md5sum": "cf53444211edced93d92983075c4368d", 
+                "file_size": 43789
+            }
+        }, 
+        {
+            "https://gtrepo-ebi.annailabs.com/": {
+                "file_md5sum": "5735f04133f58c546621c203877133b2", 
+                "file_size": 43654
+            }
+        }
+    ], 
+    "data_type": "WGS-BWA-Normal", 
+    "files": [
+        {
+            "file_md5sum": "d0941db02c848af1830db881425b2692", 
+            "file_name": "d0941db02c848af1830db881425b2692.bam", 
+            "file_size": 88456960494, 
+            "object_id": "6baa936a-92ac-5ef7-8e9c-64a91a4c409a"
+        }, 
+        {
+            "file_md5sum": "5acbfd7584a46c8bd77f0cc57d650717", 
+            "file_name": "d0941db02c848af1830db881425b2692.bam.bai", 
+            "file_size": 12499504, 
+            "object_id": "6bc1a16b-f32c-5fcb-be7c-83f9a996b6f4"
+        }, 
+        {
+            "file_md5sum": "cf53444211edced93d92983075c4368d", 
+            "file_name": "90289501-5e65-44d4-aa44-7888c8fb3307.xml", 
+            "file_size": 43789, 
+            "object_id": "27c051f1-ef2e-596f-81e0-953efcdd87e5"
+        }
+    ], 
+    "gnos_id": "90289501-5e65-44d4-aa44-7888c8fb3307", 
+    "gnos_repo": [
+        "https://gtrepo-bsc.annailabs.com/"
+    ], 
+    "is_santa_cruz": true, 
+    "project_code": "CLLE-ES", 
+    "specimen_type": "Normal - blood derived", 
+    "submitter_donor_id": "10", 
+    "submitter_sample_id": "010-0028-07ND", 
+    "submitter_specimen_id": "010-0028-07ND"
+}
