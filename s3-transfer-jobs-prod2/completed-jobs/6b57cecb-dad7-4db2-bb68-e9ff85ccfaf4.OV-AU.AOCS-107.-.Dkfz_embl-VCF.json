@@ -1,0 +1,191 @@
+{
+    "_runs_": {
+        "run_1449082788_da7d6552-5b48-4b75-8085-235c65df5206": {
+            "downloading": {
+                "gnos-download_time": 1593, 
+                "start": 1449093990, 
+                "stop": 1449095583, 
+                "time": 1593
+            }, 
+            "uploading": {
+                "copy_meta_time": 2, 
+                "start": 1449095592, 
+                "stop": 1449095883, 
+                "time": 291, 
+                "upload_time": 289
+            }
+        }
+    }, 
+    "aliquot_id": null, 
+    "available_repos": [
+        {
+            "https://gtrepo-dkfz.annailabs.com/": {
+                "file_md5sum": "8c0759a2127e3e276a91beae1dea45a1", 
+                "file_size": 51273
+            }
+        }
+    ], 
+    "data_type": "Dkfz_embl-VCF", 
+    "files": [
+        {
+            "file_md5sum": "5fe9cf78ad4f1a473c10ef182e7363c4", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.dkfz-copyNumberEstimation_1-0-189-hpc.1510221108.somatic.cnv.vcf.gz", 
+            "file_size": 38391, 
+            "object_id": "d2037ba5-2056-53c8-9d98-4f5be22dcda3"
+        }, 
+        {
+            "file_md5sum": "50b06c0701acde1f8adb6508603a0981", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.dkfz-copyNumberEstimation_1-0-189-hpc.1510221108.somatic.cnv.vcf.gz.tbi", 
+            "file_size": 14361, 
+            "object_id": "4256054d-c36c-5daf-9369-046cb04f20b4"
+        }, 
+        {
+            "file_md5sum": "a6a66be8ac66c4aea84612f823a0422b", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.dkfz-indelCalling_1-0-132-1-hpc.1510221108.germline.indel.vcf.gz", 
+            "file_size": 67827340, 
+            "object_id": "e549c49c-feeb-5bb2-9d72-a00484857c0d"
+        }, 
+        {
+            "file_md5sum": "3c809ff5b24e98ff1e2bb2fa5e97ee6c", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.dkfz-indelCalling_1-0-132-1-hpc.1510221108.germline.indel.vcf.gz.tbi", 
+            "file_size": 1430594, 
+            "object_id": "a43d3a9c-b283-52b0-94f4-bc50ed52b45e"
+        }, 
+        {
+            "file_md5sum": "b99ebd4a2291e0ed93a7640a35405038", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.dkfz-indelCalling_1-0-132-1-hpc.1510221108.somatic.indel.vcf.gz", 
+            "file_size": 1484716, 
+            "object_id": "f0e507b6-80bf-5928-b3ba-fffc32cd9d04"
+        }, 
+        {
+            "file_md5sum": "5ff99d92af6858380ad205b152cb2ef9", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.dkfz-indelCalling_1-0-132-1-hpc.1510221108.somatic.indel.vcf.gz.tbi", 
+            "file_size": 168843, 
+            "object_id": "c341f639-de38-56e5-a9a7-0fada07e2299"
+        }, 
+        {
+            "file_md5sum": "6b6cab31ae3740f92393835f1a355bb5", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.dkfz-snvCalling_1-0-132-1-hpc.1510221108.germline.snv_mnv.vcf.gz", 
+            "file_size": 94422007, 
+            "object_id": "0674a556-0de3-56a3-a249-ffa54fcb9422"
+        }, 
+        {
+            "file_md5sum": "43c051284ee546205b299200a080ad19", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.dkfz-snvCalling_1-0-132-1-hpc.1510221108.germline.snv_mnv.vcf.gz.tbi", 
+            "file_size": 1539633, 
+            "object_id": "a8785fde-3ceb-5f75-bc13-a30e23e8a89b"
+        }, 
+        {
+            "file_md5sum": "2e1af253544cadbf5688e815190297a1", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.dkfz-snvCalling_1-0-132-1-hpc.1510221108.somatic.snv_mnv.vcf.gz", 
+            "file_size": 505851, 
+            "object_id": "d734813a-1581-5da2-98bc-944105439a6c"
+        }, 
+        {
+            "file_md5sum": "7aafbfa80259bae7b65bd52115931807", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.dkfz-snvCalling_1-0-132-1-hpc.1510221108.somatic.snv_mnv.vcf.gz.tbi", 
+            "file_size": 201148, 
+            "object_id": "ba0d8cfa-ebf3-53a3-86fe-e8a3918ff8f2"
+        }, 
+        {
+            "file_md5sum": "5eb12fc496b18e4cf86bb8d227c95865", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.embl-delly_1-0-0-preFilter-hpc.150628.germline.sv.vcf.gz", 
+            "file_size": 273404, 
+            "object_id": "97ca78e1-9ce9-5a9c-abf0-39781fb8bf1b"
+        }, 
+        {
+            "file_md5sum": "403e2ddbd16542a43dc8d4305188030d", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.embl-delly_1-0-0-preFilter-hpc.150628.germline.sv.vcf.gz.tbi", 
+            "file_size": 23968, 
+            "object_id": "f59e1e2f-9b7b-524b-905e-5c920dc87f07"
+        }, 
+        {
+            "file_md5sum": "bd01a57a789481f9c15d85858eb5aa73", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.embl-delly_1-0-0-preFilter-hpc.150628.somatic.sv.vcf.gz", 
+            "file_size": 26080, 
+            "object_id": "ed54475c-2405-5923-bd15-95f80e5c1c5b"
+        }, 
+        {
+            "file_md5sum": "76badb2325f53ef8fd2d2eca0de82285", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.embl-delly_1-0-0-preFilter-hpc.150628.somatic.sv.vcf.gz.tbi", 
+            "file_size": 7926, 
+            "object_id": "dffc0152-a514-5c15-9d81-54ca4467d90b"
+        }, 
+        {
+            "file_md5sum": "bd97f9aaa83fedd09d55a43f1e0b6cdd", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.embl-delly_1-0-0-preFilter-hpc.150628.sv.vcf.gz", 
+            "file_size": 7375534, 
+            "object_id": "33d6fcc4-9144-5119-93d9-da842cce595b"
+        }, 
+        {
+            "file_md5sum": "d22f0b75ecd4eecf4b12b1a07304ff12", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.embl-delly_1-0-0-preFilter-hpc.150628.sv.vcf.gz.tbi", 
+            "file_size": 198991, 
+            "object_id": "7d837ca7-0fb5-5fad-a022-321eebef6988"
+        }, 
+        {
+            "file_md5sum": "1a494b43cf970efd20881fc008e6c4c8", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.dkfz-copyNumberEstimation_1-0-189-hpc.1510221108.somatic.cnv.tar.gz", 
+            "file_size": 3249385037, 
+            "object_id": "24930d70-b9a3-52ab-8845-105871749d64"
+        }, 
+        {
+            "file_md5sum": "de43c7ca240c9f80870df1507fc3d9e3", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.dkfz-indelCalling_1-0-132-1-hpc.1510221108.somatic.indel.tar.gz", 
+            "file_size": 616239198, 
+            "object_id": "3e2e7656-407d-553a-862b-5fdf72004747"
+        }, 
+        {
+            "file_md5sum": "954b7baea0cc25a54314ef5b65864cb4", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.dkfz-snvCalling_1-0-132-1-hpc.1510221108.somatic.snv_mnv.tar.gz", 
+            "file_size": 958720702, 
+            "object_id": "40d316fd-b174-5360-97ac-390a5aefef07"
+        }, 
+        {
+            "file_md5sum": "b2a0fcd6fc4ae34c45eb3ca83668795a", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.embl-delly_1-0-0-preFilter-hpc.150628.germline.sv.bedpe.txt.tar.gz", 
+            "file_size": 128657, 
+            "object_id": "95837f05-631f-52fb-aa5e-209f1faa5269"
+        }, 
+        {
+            "file_md5sum": "64e38ef7d09799bae1bdfd2bfdd9b351", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.embl-delly_1-0-0-preFilter-hpc.150628.germline.sv.readname.txt.tar.gz", 
+            "file_size": 4185884, 
+            "object_id": "86ea50af-1a7b-5d3d-96e3-351f0b61608a"
+        }, 
+        {
+            "file_md5sum": "b2a55ab9cc36c96b0860991df8a12449", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.embl-delly_1-0-0-preFilter-hpc.150628.somatic.sv.bedpe.txt.tar.gz", 
+            "file_size": 12716, 
+            "object_id": "5cb5c73d-f890-52ae-880e-044adbc97bd4"
+        }, 
+        {
+            "file_md5sum": "541a1d63588d9fdfe0f693b2723db9d4", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.embl-delly_1-0-0-preFilter-hpc.150628.somatic.sv.readname.txt.tar.gz", 
+            "file_size": 4185886, 
+            "object_id": "1f69ee9e-5a05-549a-bf47-62a1d074a869"
+        }, 
+        {
+            "file_md5sum": "4d7f1c6a1b2b0d35c60c733b822a9b91", 
+            "file_name": "d2e4dc23-992d-4e44-add4-2972718083cb.embl-delly_1-0-0-preFilter-hpc.150628.sv.log.tar.gz", 
+            "file_size": 49502, 
+            "object_id": "a661adc4-006f-5686-b6f1-5c3f23c9d11a"
+        }, 
+        {
+            "file_md5sum": "8c0759a2127e3e276a91beae1dea45a1", 
+            "file_name": "6b57cecb-dad7-4db2-bb68-e9ff85ccfaf4.xml", 
+            "file_size": 51273, 
+            "object_id": "c1919c45-3dc7-5306-9c2a-d261a13c54eb"
+        }
+    ], 
+    "gnos_id": "6b57cecb-dad7-4db2-bb68-e9ff85ccfaf4", 
+    "gnos_repo": [
+        "https://gtrepo-dkfz.annailabs.com/"
+    ], 
+    "is_santa_cruz": false, 
+    "project_code": "OV-AU", 
+    "specimen_type": null, 
+    "submitter_donor_id": "AOCS-107", 
+    "submitter_sample_id": null, 
+    "submitter_specimen_id": null
+}
