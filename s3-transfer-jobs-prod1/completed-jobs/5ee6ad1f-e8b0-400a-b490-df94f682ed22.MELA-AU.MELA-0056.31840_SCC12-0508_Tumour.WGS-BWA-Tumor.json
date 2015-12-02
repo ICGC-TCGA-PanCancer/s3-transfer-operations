@@ -1,0 +1,65 @@
+{
+    "_runs_": {
+        "run_1448989402_07657673-1b54-4d15-93c8-8d5652eaaff2": {
+            "downloading": {
+                "gnos-download_time": 14724, 
+                "start": 1449070790, 
+                "stop": 1449085515, 
+                "time": 14725
+            }, 
+            "uploading": {
+                "copy_meta_time": 2, 
+                "start": 1449085526, 
+                "stop": 1449091765, 
+                "time": 6239, 
+                "upload_time": 6237
+            }
+        }
+    }, 
+    "aliquot_id": "3433b1f3-59d1-4ac2-9bbf-e0c4042b4ddc", 
+    "available_repos": [
+        {
+            "https://gtrepo-ebi.annailabs.com/": {
+                "file_md5sum": "ba7b69b43b9aac305f51e5034ed43239", 
+                "file_size": 41299
+            }
+        }, 
+        {
+            "https://gtrepo-bsc.annailabs.com/": {
+                "file_md5sum": "5edb9be56486d12f55c6272e950e0a8d", 
+                "file_size": 41300
+            }
+        }
+    ], 
+    "data_type": "WGS-BWA-Tumor", 
+    "files": [
+        {
+            "file_md5sum": "57f38f627a998d43a8474fd5be113929", 
+            "file_name": "57f38f627a998d43a8474fd5be113929.bam", 
+            "file_size": 158931949624, 
+            "object_id": "7d287c61-643a-5636-bd4c-e3be0be833d4"
+        }, 
+        {
+            "file_md5sum": "25d2f2030851d8a2cb9e727e5eb25632", 
+            "file_name": "57f38f627a998d43a8474fd5be113929.bam.bai", 
+            "file_size": 15460872, 
+            "object_id": "1ba1602d-2fe5-5949-a4ae-9821dfe23754"
+        }, 
+        {
+            "file_md5sum": "5edb9be56486d12f55c6272e950e0a8d", 
+            "file_name": "5ee6ad1f-e8b0-400a-b490-df94f682ed22.xml", 
+            "file_size": 41300, 
+            "object_id": "edaac59d-3749-5cd8-87d9-ddf45bdf49cd"
+        }
+    ], 
+    "gnos_id": "5ee6ad1f-e8b0-400a-b490-df94f682ed22", 
+    "gnos_repo": [
+        "https://gtrepo-bsc.annailabs.com/"
+    ], 
+    "is_santa_cruz": false, 
+    "project_code": "MELA-AU", 
+    "specimen_type": "Metastatic tumour - metastasis local to lymph node", 
+    "submitter_donor_id": "MELA-0056", 
+    "submitter_sample_id": "EXTERN-MELA-20140514-026", 
+    "submitter_specimen_id": "31840_SCC12-0508_Tumour"
+}
