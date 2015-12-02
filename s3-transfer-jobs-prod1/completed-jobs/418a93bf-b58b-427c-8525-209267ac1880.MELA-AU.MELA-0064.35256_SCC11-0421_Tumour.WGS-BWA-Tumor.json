@@ -1,0 +1,71 @@
+{
+    "_runs_": {
+        "run_1448989402_07657673-1b54-4d15-93c8-8d5652eaaff2": {
+            "downloading": {
+                "gnos-download_time": 13323, 
+                "start": 1449021986, 
+                "stop": 1449035310, 
+                "time": 13324
+            }, 
+            "uploading": {
+                "copy_meta_time": 2, 
+                "start": 1449035329, 
+                "stop": 1449041962, 
+                "time": 6633, 
+                "upload_time": 6630
+            }
+        }
+    }, 
+    "aliquot_id": "ead1bc2e-42c3-46d9-8f6f-8cb16ba9d2c3", 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "47df3fc69ebae55756c620aa55498896", 
+                "file_size": 36049
+            }
+        }, 
+        {
+            "https://gtrepo-bsc.annailabs.com/": {
+                "file_md5sum": "ef17495ec2cd473ecf2922eba0be26e3", 
+                "file_size": 36032
+            }
+        }, 
+        {
+            "https://gtrepo-ebi.annailabs.com/": {
+                "file_md5sum": "381dd5c009eec9586d405ba64b902a1c", 
+                "file_size": 35914
+            }
+        }
+    ], 
+    "data_type": "WGS-BWA-Tumor", 
+    "files": [
+        {
+            "file_md5sum": "7c3abba467e2e2377d0ee7aeb27bf39f", 
+            "file_name": "7c3abba467e2e2377d0ee7aeb27bf39f.bam", 
+            "file_size": 162329915597, 
+            "object_id": "03248f20-2dd6-54fa-a885-74e026f0e33d"
+        }, 
+        {
+            "file_md5sum": "5d20515ea608155d862b4b594bd03a53", 
+            "file_name": "7c3abba467e2e2377d0ee7aeb27bf39f.bam.bai", 
+            "file_size": 15258480, 
+            "object_id": "70d94b60-c4f8-5033-94f5-404d127d3367"
+        }, 
+        {
+            "file_md5sum": "ef17495ec2cd473ecf2922eba0be26e3", 
+            "file_name": "418a93bf-b58b-427c-8525-209267ac1880.xml", 
+            "file_size": 36032, 
+            "object_id": "6c85e6fe-d71d-50ab-8763-83f75a7b379b"
+        }
+    ], 
+    "gnos_id": "418a93bf-b58b-427c-8525-209267ac1880", 
+    "gnos_repo": [
+        "https://gtrepo-bsc.annailabs.com/"
+    ], 
+    "is_santa_cruz": false, 
+    "project_code": "MELA-AU", 
+    "specimen_type": "Recurrent tumour - solid tissue", 
+    "submitter_donor_id": "MELA-0064", 
+    "submitter_sample_id": "EXTERN-MELA-20140514-043", 
+    "submitter_specimen_id": "35256_SCC11-0421_Tumour"
+}
