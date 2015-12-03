@@ -1,0 +1,73 @@
+{
+    "_runs_": {
+        "run_1446006239_79bf997f-8aae-49ff-9133-b61ef75fc8ea": {
+            "downloading": {
+                "gnos-download_time": 14230, 
+                "start": 1446215920, 
+                "stop": 1446230151, 
+                "time": 14231
+            }, 
+            "uploading": {
+                "start": 1446230157, 
+                "stop": 1446232234, 
+                "time": 2077, 
+                "upload_time": 2077
+            }
+        }, 
+        "run_1449025062_645a80ec-7b7d-49d8-b9c3-e3ce3677d7e8": {
+            "downloading": {
+                "gnos-download_time": 1055, 
+                "gtdownload-error": true, 
+                "start": 1449175719, 
+                "stop": 1449176774, 
+                "time": 1055
+            }
+        }
+    }, 
+    "aliquot_id": "1af0ba1f-b6a2-43b0-b7e8-5c669572748e", 
+    "available_repos": [
+        {
+            "https://gtrepo-bsc.annailabs.com/": {
+                "file_md5sum": "f1cf38a2b143c5c629725a18472f48bb", 
+                "file_size": 47148
+            }
+        }, 
+        {
+            "https://gtrepo-ebi.annailabs.com/": {
+                "file_md5sum": "88e4803c595db81a4794d8714ff316fa", 
+                "file_size": 47008
+            }
+        }
+    ], 
+    "data_type": "WGS-BWA-Normal", 
+    "files": [
+        {
+            "file_md5sum": "4fdec44150067faa3b87b81e992c3fb2", 
+            "file_name": "4fdec44150067faa3b87b81e992c3fb2.bam", 
+            "file_size": 136001932386, 
+            "object_id": "aad42887-589d-5e11-8f98-212c4e0571af"
+        }, 
+        {
+            "file_md5sum": "fbc135dc9c470bcc977d88fe9d471a30", 
+            "file_name": "4fdec44150067faa3b87b81e992c3fb2.bam.bai", 
+            "file_size": 16957040, 
+            "object_id": "013e1068-9356-5324-b16a-6a6133b82043"
+        }, 
+        {
+            "file_md5sum": "f1cf38a2b143c5c629725a18472f48bb", 
+            "file_name": "74367c56-531d-4581-8c94-d4a34694cd95.xml", 
+            "file_size": 47148, 
+            "object_id": "d4b80a80-6b90-5de4-b5ba-d4420dc8e6ec"
+        }
+    ], 
+    "gnos_id": "74367c56-531d-4581-8c94-d4a34694cd95", 
+    "gnos_repo": [
+        "https://gtrepo-bsc.annailabs.com/"
+    ], 
+    "is_santa_cruz": true, 
+    "project_code": "CLLE-ES", 
+    "specimen_type": "Normal - blood derived", 
+    "submitter_donor_id": "294", 
+    "submitter_sample_id": "294-01-10ND", 
+    "submitter_specimen_id": "294-01-10ND"
+}
