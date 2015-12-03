@@ -1,0 +1,72 @@
+{
+    "_runs_": {
+        "run_1446006239_79bf997f-8aae-49ff-9133-b61ef75fc8ea": {
+            "downloading": {
+                "gnos-download_time": 4493, 
+                "start": 1446019733, 
+                "stop": 1446024227, 
+                "time": 4494
+            }, 
+            "uploading": {
+                "start": 1446024231, 
+                "stop": 1446025505, 
+                "time": 1274, 
+                "upload_time": 1274
+            }
+        }, 
+        "run_1449024723_5f471ce0-697f-4d3a-8aae-2aa48e7718c5": {
+            "downloading": {
+                "gnos-download_time": 5834, 
+                "start": 1449167528, 
+                "stop": 1449173363, 
+                "time": 5835
+            }
+        }
+    }, 
+    "aliquot_id": "1bdfaa8a-1b7e-4251-b135-ce5e4568371b", 
+    "available_repos": [
+        {
+            "https://gtrepo-bsc.annailabs.com/": {
+                "file_md5sum": "58dd4665006d2ff99bf2978448bcdf78", 
+                "file_size": 44815
+            }
+        }, 
+        {
+            "https://gtrepo-ebi.annailabs.com/": {
+                "file_md5sum": "f8b73f7778ae4007c9fee5f1d3ae7f25", 
+                "file_size": 44679
+            }
+        }
+    ], 
+    "data_type": "WGS-BWA-Tumor", 
+    "files": [
+        {
+            "file_md5sum": "06c94389ddc5e7fde98ba31083e437a5", 
+            "file_name": "06c94389ddc5e7fde98ba31083e437a5.bam", 
+            "file_size": 90973620335, 
+            "object_id": "ed3420fa-2928-5084-a85b-f6816604162c"
+        }, 
+        {
+            "file_md5sum": "e8b690228d3d5e80314512b906345ce6", 
+            "file_name": "06c94389ddc5e7fde98ba31083e437a5.bam.bai", 
+            "file_size": 11730384, 
+            "object_id": "cfbb81b3-31b0-5907-a42f-62def6e7c6da"
+        }, 
+        {
+            "file_md5sum": "f8b73f7778ae4007c9fee5f1d3ae7f25", 
+            "file_name": "2582b4ef-212f-4313-8fe3-bf4bbd3b4e25.xml", 
+            "file_size": 44679, 
+            "object_id": "e3601ed1-d3c3-5a71-800a-250abf47f132"
+        }
+    ], 
+    "gnos_id": "2582b4ef-212f-4313-8fe3-bf4bbd3b4e25", 
+    "gnos_repo": [
+        "https://gtrepo-ebi.annailabs.com/"
+    ], 
+    "is_santa_cruz": true, 
+    "project_code": "CLLE-ES", 
+    "specimen_type": "Primary tumour - blood derived (peripheral blood)", 
+    "submitter_donor_id": "761", 
+    "submitter_sample_id": "761-01-1TD", 
+    "submitter_specimen_id": "761-01-1TD"
+}
