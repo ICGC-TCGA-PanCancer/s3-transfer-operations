@@ -1,0 +1,79 @@
+{
+    "_runs_": {
+        "run_1446005551_f7121305-1fc9-4533-a022-e990841735c4": {
+            "downloading": {
+                "gnos-download_time": 13879, 
+                "start": 1446030135, 
+                "stop": 1446044015, 
+                "time": 13880
+            }, 
+            "uploading": {
+                "start": 1446044018, 
+                "stop": 1446045089, 
+                "time": 1071, 
+                "upload_time": 1071
+            }
+        }, 
+        "run_1449025383_1a2452f6-d31b-4e95-8284-19c8d6e48057": {
+            "downloading": {
+                "gnos-download_time": 5171, 
+                "start": 1449154029, 
+                "stop": 1449159201, 
+                "time": 5172
+            }, 
+            "uploading": {
+                "copy_meta_time": 1, 
+                "start": 1449159215, 
+                "stop": 1449162390, 
+                "time": 3175, 
+                "upload_time": 3173
+            }
+        }
+    }, 
+    "aliquot_id": "eb869e3b-53a0-48e6-93b1-843c6c3ac23a", 
+    "available_repos": [
+        {
+            "https://gtrepo-bsc.annailabs.com/": {
+                "file_md5sum": "265c55c119f7fb50357de04bbad69177", 
+                "file_size": 46587
+            }
+        }, 
+        {
+            "https://gtrepo-ebi.annailabs.com/": {
+                "file_md5sum": "f947990949207c6360649d2a6b2eeb25", 
+                "file_size": 46447
+            }
+        }
+    ], 
+    "data_type": "WGS-BWA-Normal", 
+    "files": [
+        {
+            "file_md5sum": "3f05a22f9065c36db2c80e8b0b883f39", 
+            "file_name": "3f05a22f9065c36db2c80e8b0b883f39.bam", 
+            "file_size": 81432334562, 
+            "object_id": "23a1b891-4c2b-504f-b454-6a003dbc1019"
+        }, 
+        {
+            "file_md5sum": "d62657095b26353c07df8a704d98572a", 
+            "file_name": "3f05a22f9065c36db2c80e8b0b883f39.bam.bai", 
+            "file_size": 11439272, 
+            "object_id": "45a05d80-3ea0-58ff-b468-09e877fe32d1"
+        }, 
+        {
+            "file_md5sum": "f947990949207c6360649d2a6b2eeb25", 
+            "file_name": "3f478bec-0827-458b-aad6-441595e1f6fa.xml", 
+            "file_size": 46447, 
+            "object_id": "c6ca9e09-6ed0-5ea5-a3c8-daaa17f1a734"
+        }
+    ], 
+    "gnos_id": "3f478bec-0827-458b-aad6-441595e1f6fa", 
+    "gnos_repo": [
+        "https://gtrepo-ebi.annailabs.com/"
+    ], 
+    "is_santa_cruz": true, 
+    "project_code": "CLLE-ES", 
+    "specimen_type": "Normal - blood derived", 
+    "submitter_donor_id": "179", 
+    "submitter_sample_id": "179-05-03ND", 
+    "submitter_specimen_id": "179-05-03ND"
+}
