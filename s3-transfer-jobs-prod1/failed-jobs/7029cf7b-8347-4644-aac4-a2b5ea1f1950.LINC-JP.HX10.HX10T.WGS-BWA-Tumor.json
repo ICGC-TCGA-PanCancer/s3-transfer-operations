@@ -1,0 +1,59 @@
+{
+    "_runs_": {
+        "run_1449025062_645a80ec-7b7d-49d8-b9c3-e3ce3677d7e8": {
+            "downloading": {
+                "gnos-download_time": 1876, 
+                "gtdownload-error": true, 
+                "start": 1449172945, 
+                "stop": 1449174822, 
+                "time": 1877
+            }
+        }
+    }, 
+    "aliquot_id": "cf777ef1-765f-4828-b789-f5aa6722eb35", 
+    "available_repos": [
+        {
+            "https://gtrepo-ebi.annailabs.com/": {
+                "file_md5sum": "96e138106b8c5a6927aba4bda4d131b1", 
+                "file_size": 166660
+            }
+        }, 
+        {
+            "https://gtrepo-bsc.annailabs.com/": {
+                "file_md5sum": "c82a3e0973744087b1b8f9429cf0db8c", 
+                "file_size": 166661
+            }
+        }
+    ], 
+    "data_type": "WGS-BWA-Tumor", 
+    "files": [
+        {
+            "file_md5sum": "1c699aa07bf9ef539467388264b4a749", 
+            "file_name": "1c699aa07bf9ef539467388264b4a749.bam", 
+            "file_size": 262234200894, 
+            "object_id": "76d76bf1-fc6d-5e2a-82f4-693c3bd6234a"
+        }, 
+        {
+            "file_md5sum": "7586747f33ac93a62ecdcd7e374d3079", 
+            "file_name": "1c699aa07bf9ef539467388264b4a749.bam.bai", 
+            "file_size": 53135248, 
+            "object_id": "0bfc1620-e534-54de-9d36-8ea937f51e2c"
+        }, 
+        {
+            "file_md5sum": "c82a3e0973744087b1b8f9429cf0db8c", 
+            "file_name": "7029cf7b-8347-4644-aac4-a2b5ea1f1950.xml", 
+            "file_size": 166661, 
+            "object_id": "983ed3e3-3c47-5c23-8a9e-f2eb3ecfb12c"
+        }
+    ], 
+    "gnos_id": "7029cf7b-8347-4644-aac4-a2b5ea1f1950", 
+    "gnos_repo": [
+        "https://gtrepo-bsc.annailabs.com/"
+    ], 
+    "is_santa_cruz": false, 
+    "project_code": "LINC-JP", 
+    "specimen_type": "Primary tumour - solid tissue", 
+    "submitter_donor_id": "HX10", 
+    "submitter_sample_id": "HX10T", 
+    "submitter_specimen_id": "HX10T"
+}
