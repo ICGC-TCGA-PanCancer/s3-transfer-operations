@@ -1,0 +1,79 @@
+{
+    "_runs_": {
+        "run_1446006239_79bf997f-8aae-49ff-9133-b61ef75fc8ea": {
+            "downloading": {
+                "gnos-download_time": 19336, 
+                "start": 1446025512, 
+                "stop": 1446044849, 
+                "time": 19337
+            }, 
+            "uploading": {
+                "start": 1446044853, 
+                "stop": 1446047041, 
+                "time": 2188, 
+                "upload_time": 2188
+            }
+        }, 
+        "run_1449024908_54eff0e1-72d5-4944-92bb-0f98f20f2ca9": {
+            "downloading": {
+                "gnos-download_time": 10276, 
+                "start": 1449104330, 
+                "stop": 1449114607, 
+                "time": 10277
+            }, 
+            "uploading": {
+                "copy_meta_time": 2, 
+                "start": 1449114623, 
+                "stop": 1449120810, 
+                "time": 6187, 
+                "upload_time": 6184
+            }
+        }
+    }, 
+    "aliquot_id": "1157a548-6770-4c89-a84c-bcf6f0e96ea8", 
+    "available_repos": [
+        {
+            "https://gtrepo-bsc.annailabs.com/": {
+                "file_md5sum": "5c8a880aa427b4f206646cce4c18fce4", 
+                "file_size": 101457
+            }
+        }, 
+        {
+            "https://gtrepo-ebi.annailabs.com/": {
+                "file_md5sum": "8e3302060411c5382c452e15d652e818", 
+                "file_size": 101215
+            }
+        }
+    ], 
+    "data_type": "WGS-BWA-Tumor", 
+    "files": [
+        {
+            "file_md5sum": "5cc0ab1518e2f4a06fe452a86f286bbb", 
+            "file_name": "5cc0ab1518e2f4a06fe452a86f286bbb.bam", 
+            "file_size": 148214546208, 
+            "object_id": "a3e91db3-e4d2-52f8-a83d-fb786cd05111"
+        }, 
+        {
+            "file_md5sum": "c9cd8bb60848290b8570c696ccb62c39", 
+            "file_name": "5cc0ab1518e2f4a06fe452a86f286bbb.bam.bai", 
+            "file_size": 37166792, 
+            "object_id": "d61e83e8-1262-515c-a796-a12626791182"
+        }, 
+        {
+            "file_md5sum": "8e3302060411c5382c452e15d652e818", 
+            "file_name": "38ec0e1c-63ac-4378-a148-93f2e3c819aa.xml", 
+            "file_size": 101215, 
+            "object_id": "14a52828-ece7-574e-b33e-59f4980a1dca"
+        }
+    ], 
+    "gnos_id": "38ec0e1c-63ac-4378-a148-93f2e3c819aa", 
+    "gnos_repo": [
+        "https://gtrepo-ebi.annailabs.com/"
+    ], 
+    "is_santa_cruz": true, 
+    "project_code": "CLLE-ES", 
+    "specimen_type": "Primary tumour - blood derived (peripheral blood)", 
+    "submitter_donor_id": "2", 
+    "submitter_sample_id": "002-0010-10TD", 
+    "submitter_specimen_id": "002-0010-10TD"
+}
