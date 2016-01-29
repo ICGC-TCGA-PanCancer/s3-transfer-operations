@@ -1,0 +1,137 @@
+{
+    "_runs_": {
+        "run_1454096312_1c7f59be-3963-489a-aa73-201ac807a7ad": {
+            "downloading": {
+                "gnos-download_time": 4716, 
+                "start": 1454097374, 
+                "stop": 1454102090, 
+                "time": 4716
+            }, 
+            "uploading": {
+                "copy_meta_time": 2, 
+                "start": 1454102097, 
+                "stop": 1454102205, 
+                "time": 108, 
+                "upload_time": 106
+            }
+        }
+    }, 
+    "aliquot_id": null, 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "5f91ecccffffedea44769c4ff3613147", 
+                "file_size": 60482
+            }
+        }
+    ], 
+    "data_type": "Sanger-VCF", 
+    "files": [
+        {
+            "file_md5sum": "6332005abba5fe8484d9a93958b7bb70", 
+            "file_name": "c19a1388-95e6-4708-a24c-3738f1908071.svcp_1-0-5.20150821.somatic.snv_mnv.vcf.gz", 
+            "file_size": 2506211, 
+            "object_id": "89dfbc4d-ef81-544e-904b-33dcdfec1bec"
+        }, 
+        {
+            "file_md5sum": "773e1d0a6f70a03bb44259495a1943d1", 
+            "file_name": "c19a1388-95e6-4708-a24c-3738f1908071.svcp_1-0-5.20150821.somatic.snv_mnv.vcf.gz.tbi", 
+            "file_size": 398744, 
+            "object_id": "dfe1194f-9d95-56ab-a933-dffa31cfe2c4"
+        }, 
+        {
+            "file_md5sum": "bdf66401b7bda8582edfe89b6c1bfd5b", 
+            "file_name": "c19a1388-95e6-4708-a24c-3738f1908071.svcp_1-0-5.20150821.somatic.cnv.vcf.gz", 
+            "file_size": 2076, 
+            "object_id": "7c52cc16-a552-5452-af6c-567db4df4d59"
+        }, 
+        {
+            "file_md5sum": "881e62e902815b4950f19e8958e5b31d", 
+            "file_name": "c19a1388-95e6-4708-a24c-3738f1908071.svcp_1-0-5.20150821.somatic.cnv.vcf.gz.tbi", 
+            "file_size": 4236, 
+            "object_id": "e45518d8-dd44-5a15-8249-6495db2d3795"
+        }, 
+        {
+            "file_md5sum": "b45b77616dd921923d03e541f4006926", 
+            "file_name": "c19a1388-95e6-4708-a24c-3738f1908071.svfix_4-0-5.20160126.somatic.sv.vcf.gz", 
+            "file_size": 4718, 
+            "object_id": "6d53efab-3b3f-5b73-8797-94a4c2ca1cea"
+        }, 
+        {
+            "file_md5sum": "34dca52ccb762e204f08ad800fbd2887", 
+            "file_name": "c19a1388-95e6-4708-a24c-3738f1908071.svfix_4-0-5.20160126.somatic.sv.vcf.gz.tbi", 
+            "file_size": 914, 
+            "object_id": "4aa4c573-ca98-5b18-93d0-ee73975e0617"
+        }, 
+        {
+            "file_md5sum": "81642bc291603e38d1da1e6f313d3674", 
+            "file_name": "c19a1388-95e6-4708-a24c-3738f1908071.svcp_1-0-5.20150821.somatic.indel.vcf.gz", 
+            "file_size": 48648733, 
+            "object_id": "c8a7ac3e-f336-514b-8549-aca3cf4f8094"
+        }, 
+        {
+            "file_md5sum": "0ab8fc405156fa9806d29db69c787883", 
+            "file_name": "c19a1388-95e6-4708-a24c-3738f1908071.svcp_1-0-5.20150821.somatic.indel.vcf.gz.tbi", 
+            "file_size": 1466410, 
+            "object_id": "08c91a7c-9d2b-5706-93a6-c6b57c4a80aa"
+        }, 
+        {
+            "file_md5sum": "1663e082bc7264975d4f54ff94dd5183", 
+            "file_name": "c19a1388-95e6-4708-a24c-3738f1908071.svcp_1-0-5.20150821.somatic.snv_mnv.tar.gz", 
+            "file_size": 169315969, 
+            "object_id": "ab61b630-7558-5b02-8735-dd43edc8b637"
+        }, 
+        {
+            "file_md5sum": "414dcb79b42a0a4fdd2746a948852ced", 
+            "file_name": "c19a1388-95e6-4708-a24c-3738f1908071.svcp_1-0-5.20150821.somatic.cnv.tar.gz", 
+            "file_size": 26888096, 
+            "object_id": "7128ff9b-0edc-5210-b87d-6f81647910ac"
+        }, 
+        {
+            "file_md5sum": "6240489c0d59b3592b39cac29a90405c", 
+            "file_name": "c19a1388-95e6-4708-a24c-3738f1908071.svfix_4-0-5.20160126.somatic.sv.tar.gz", 
+            "file_size": 296358396, 
+            "object_id": "8a0d0335-1f02-5f79-b557-10a310acb9f2"
+        }, 
+        {
+            "file_md5sum": "83f3351c914056b70cbd9bbeea549ca1", 
+            "file_name": "c19a1388-95e6-4708-a24c-3738f1908071.svcp_1-0-5.20150821.somatic.indel.tar.gz", 
+            "file_size": 854431040, 
+            "object_id": "2d5bbdcb-2742-58b4-b672-5fd773742707"
+        }, 
+        {
+            "file_md5sum": "6ab7cc8c133937a45d5d5a7e803c0c9b", 
+            "file_name": "c19a1388-95e6-4708-a24c-3738f1908071.svcp_1-0-5.20150821.somatic.imputeCounts.tar.gz", 
+            "file_size": 455402218, 
+            "object_id": "ab85f03f-332d-5c7c-8be5-b44b040eec3a"
+        }, 
+        {
+            "file_md5sum": "dc9342ccad4fb2404ce83bf01ba6d229", 
+            "file_name": "c19a1388-95e6-4708-a24c-3738f1908071.svcp_1-0-5.20150821.somatic.genotype.tar.gz", 
+            "file_size": 2460, 
+            "object_id": "f44e013b-5caf-5974-8f8a-657b280486a0"
+        }, 
+        {
+            "file_md5sum": "6b203bb331e6e76707c8107549f290cc", 
+            "file_name": "c19a1388-95e6-4708-a24c-3738f1908071.svcp_1-0-5.20150821.somatic.verifyBamId.tar.gz", 
+            "file_size": 938718, 
+            "object_id": "1a092b92-c1c2-5cdb-9abb-1dceda6d5d56"
+        }, 
+        {
+            "file_md5sum": "5f91ecccffffedea44769c4ff3613147", 
+            "file_name": "297ee4d4-c416-11e5-8678-deaad7f783dd.xml", 
+            "file_size": 60482, 
+            "object_id": "6a2c3d29-166b-52b0-af6c-b859f6a97547"
+        }
+    ], 
+    "gnos_id": "297ee4d4-c416-11e5-8678-deaad7f783dd", 
+    "gnos_repo": [
+        "https://gtrepo-osdc-icgc.annailabs.com/"
+    ], 
+    "project_code": "RECA-EU", 
+    "specimen_type": null, 
+    "submitter_donor_id": "C0054", 
+    "submitter_sample_id": null, 
+    "submitter_specimen_id": null, 
+    "vcf_workflow_result_version": "v2"
+}
