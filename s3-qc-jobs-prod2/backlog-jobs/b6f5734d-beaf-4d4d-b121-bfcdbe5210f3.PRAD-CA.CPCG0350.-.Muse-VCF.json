@@ -1,0 +1,59 @@
+{
+    "_runs_": {
+        "run_1454298561_7b11da6b-96aa-4dd1-b243-b9041326427c": {
+            "downloading": {
+                "gnos-download_time": 35, 
+                "start": 1454318465, 
+                "stop": 1454318501, 
+                "time": 36
+            }, 
+            "uploading": {
+                "copy_meta_time": 1, 
+                "start": 1454318505, 
+                "stop": 1454318521, 
+                "time": 16, 
+                "upload_time": 15
+            }
+        }
+    }, 
+    "aliquot_id": null, 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "5517045c026130da815c1d511805398f", 
+                "file_size": 37309
+            }
+        }
+    ], 
+    "data_type": "Muse-VCF", 
+    "files": [
+        {
+            "file_md5sum": "037414d26f7359e9e96478ac86b960aa", 
+            "file_name": "dc85552c-2488-48d9-9da1-67a380945b85.MUSE_1-0rc-vcf.20151120.somatic.snv_mnv.vcf.gz", 
+            "file_size": 188779, 
+            "object_id": "c48304e2-323b-59e4-bc2e-674a2d950538"
+        }, 
+        {
+            "file_md5sum": "bd176329e32c9ca3d3b48228128d9e94", 
+            "file_name": "dc85552c-2488-48d9-9da1-67a380945b85.MUSE_1-0rc-vcf.20151120.somatic.snv_mnv.vcf.gz.idx", 
+            "file_size": 83462, 
+            "object_id": "6915e642-bada-5993-a8c6-e43fe4c0fb95"
+        }, 
+        {
+            "file_md5sum": "5517045c026130da815c1d511805398f", 
+            "file_name": "b6f5734d-beaf-4d4d-b121-bfcdbe5210f3.xml", 
+            "file_size": 37309, 
+            "object_id": "3be443bc-a7fc-5f94-a28f-02facd6ac4dc"
+        }
+    ], 
+    "gnos_id": "b6f5734d-beaf-4d4d-b121-bfcdbe5210f3", 
+    "gnos_repo": [
+        "https://gtrepo-osdc-icgc.annailabs.com/"
+    ], 
+    "project_code": "PRAD-CA", 
+    "specimen_type": null, 
+    "submitter_donor_id": "CPCG0350", 
+    "submitter_sample_id": null, 
+    "submitter_specimen_id": null, 
+    "vcf_workflow_result_version": "v1"
+}

@@ -1,0 +1,59 @@
+{
+    "_runs_": {
+        "run_1454298561_7b11da6b-96aa-4dd1-b243-b9041326427c": {
+            "downloading": {
+                "gnos-download_time": 40, 
+                "start": 1454306625, 
+                "stop": 1454306665, 
+                "time": 40
+            }, 
+            "uploading": {
+                "copy_meta_time": 1, 
+                "start": 1454306670, 
+                "stop": 1454306685, 
+                "time": 15, 
+                "upload_time": 14
+            }
+        }
+    }, 
+    "aliquot_id": null, 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "df112e56c98d74682ca382bef6ea3cb3", 
+                "file_size": 35609
+            }
+        }
+    ], 
+    "data_type": "Muse-VCF", 
+    "files": [
+        {
+            "file_md5sum": "654cfc6cc0d2beeabe47fa3a03ec3070", 
+            "file_name": "b54b9433-ec10-4cb5-a860-4555da64917b.MUSE_1-0rc-vcf.20151215.somatic.snv_mnv.vcf.gz", 
+            "file_size": 234778, 
+            "object_id": "0ebb98ae-80e2-5661-a125-37644a8456fc"
+        }, 
+        {
+            "file_md5sum": "1eca889fbda01843d156834f213a6373", 
+            "file_name": "b54b9433-ec10-4cb5-a860-4555da64917b.MUSE_1-0rc-vcf.20151215.somatic.snv_mnv.vcf.gz.idx", 
+            "file_size": 121817, 
+            "object_id": "22dea850-7f9e-5220-a704-e1ea0afc558a"
+        }, 
+        {
+            "file_md5sum": "df112e56c98d74682ca382bef6ea3cb3", 
+            "file_name": "4337583e-a57d-4974-b81a-b011fad9c618.xml", 
+            "file_size": 35609, 
+            "object_id": "fdc37dda-7dc7-5fae-ace5-fb0fcee518cb"
+        }
+    ], 
+    "gnos_id": "4337583e-a57d-4974-b81a-b011fad9c618", 
+    "gnos_repo": [
+        "https://gtrepo-osdc-icgc.annailabs.com/"
+    ], 
+    "project_code": "PACA-CA", 
+    "specimen_type": null, 
+    "submitter_donor_id": "PCSI_0274", 
+    "submitter_sample_id": null, 
+    "submitter_specimen_id": null, 
+    "vcf_workflow_result_version": "v1"
+}

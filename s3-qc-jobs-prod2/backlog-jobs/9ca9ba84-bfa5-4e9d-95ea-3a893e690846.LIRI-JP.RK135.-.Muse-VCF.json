@@ -1,0 +1,59 @@
+{
+    "_runs_": {
+        "run_1454298654_386647a0-5f8b-4196-bab3-c5e5a51b5314": {
+            "downloading": {
+                "gnos-download_time": 32, 
+                "start": 1454315717, 
+                "stop": 1454315749, 
+                "time": 32
+            }, 
+            "uploading": {
+                "copy_meta_time": 1, 
+                "start": 1454315754, 
+                "stop": 1454315769, 
+                "time": 15, 
+                "upload_time": 14
+            }
+        }
+    }, 
+    "aliquot_id": null, 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "c098c27633995086d9cce9fc2782eb2d", 
+                "file_size": 34912
+            }
+        }
+    ], 
+    "data_type": "Muse-VCF", 
+    "files": [
+        {
+            "file_md5sum": "060eaf9fcc60be4a896c7f8ed15bc115", 
+            "file_name": "d60f880a-c622-11e3-bf01-24c6515278c0.MUSE_1-0rc-vcf.20151216.somatic.snv_mnv.vcf.gz", 
+            "file_size": 420938, 
+            "object_id": "a3a8f787-40ad-53c2-a6ca-26ed366eec32"
+        }, 
+        {
+            "file_md5sum": "2a476f657db01aa636907a1dc569dc41", 
+            "file_name": "d60f880a-c622-11e3-bf01-24c6515278c0.MUSE_1-0rc-vcf.20151216.somatic.snv_mnv.vcf.gz.idx", 
+            "file_size": 213294, 
+            "object_id": "93de9a75-e716-5b94-a89a-cb351bcde712"
+        }, 
+        {
+            "file_md5sum": "c098c27633995086d9cce9fc2782eb2d", 
+            "file_name": "9ca9ba84-bfa5-4e9d-95ea-3a893e690846.xml", 
+            "file_size": 34912, 
+            "object_id": "43c2ab51-9820-5a89-be9f-2f4590f7d0e4"
+        }
+    ], 
+    "gnos_id": "9ca9ba84-bfa5-4e9d-95ea-3a893e690846", 
+    "gnos_repo": [
+        "https://gtrepo-osdc-icgc.annailabs.com/"
+    ], 
+    "project_code": "LIRI-JP", 
+    "specimen_type": null, 
+    "submitter_donor_id": "RK135", 
+    "submitter_sample_id": null, 
+    "submitter_specimen_id": null, 
+    "vcf_workflow_result_version": "v1"
+}

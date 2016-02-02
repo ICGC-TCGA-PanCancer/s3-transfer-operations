@@ -1,0 +1,59 @@
+{
+    "_runs_": {
+        "run_1454298278_75dd4641-42c1-45d2-a4cb-1480434a27d0": {
+            "downloading": {
+                "gnos-download_time": 24, 
+                "start": 1454317786, 
+                "stop": 1454317810, 
+                "time": 24
+            }, 
+            "uploading": {
+                "copy_meta_time": 1, 
+                "start": 1454317837, 
+                "stop": 1454317852, 
+                "time": 15, 
+                "upload_time": 14
+            }
+        }
+    }, 
+    "aliquot_id": null, 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "3b06c2d4fe84cb9c255d654585ceaa8a", 
+                "file_size": 35449
+            }
+        }
+    ], 
+    "data_type": "Muse-VCF", 
+    "files": [
+        {
+            "file_md5sum": "94ee4ca5bf66a8a4c32eba317be1ee7e", 
+            "file_name": "26c301a6-a597-4c24-9f6c-2293e5ae41c7.MUSE_1-0rc-vcf.20150918.somatic.snv_mnv.vcf.gz", 
+            "file_size": 108234, 
+            "object_id": "27e0f200-19c8-58b6-8e05-ac7959334989"
+        }, 
+        {
+            "file_md5sum": "49ff43e57992ba1ca118d5c2f4ea78b2", 
+            "file_name": "26c301a6-a597-4c24-9f6c-2293e5ae41c7.MUSE_1-0rc-vcf.20150918.somatic.snv_mnv.vcf.gz.idx", 
+            "file_size": 62072, 
+            "object_id": "beeec788-1bcc-59f7-a2d0-fe6b16a068c0"
+        }, 
+        {
+            "file_md5sum": "3b06c2d4fe84cb9c255d654585ceaa8a", 
+            "file_name": "b12e8677-9a85-4ede-906e-993ada456193.xml", 
+            "file_size": 35449, 
+            "object_id": "5f709fc7-7017-5831-952d-570e73e9f8d4"
+        }
+    ], 
+    "gnos_id": "b12e8677-9a85-4ede-906e-993ada456193", 
+    "gnos_repo": [
+        "https://gtrepo-osdc-icgc.annailabs.com/"
+    ], 
+    "project_code": "CLLE-ES", 
+    "specimen_type": null, 
+    "submitter_donor_id": "20", 
+    "submitter_sample_id": null, 
+    "submitter_specimen_id": null, 
+    "vcf_workflow_result_version": "v1"
+}

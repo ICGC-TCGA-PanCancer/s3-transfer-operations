@@ -1,0 +1,71 @@
+{
+    "_runs_": {
+        "run_1454298278_75dd4641-42c1-45d2-a4cb-1480434a27d0": {
+            "downloading": {
+                "gnos-download_time": 30, 
+                "start": 1454328883, 
+                "stop": 1454328914, 
+                "time": 31
+            }, 
+            "uploading": {
+                "copy_meta_time": 1, 
+                "start": 1454328919, 
+                "stop": 1454328936, 
+                "time": 17, 
+                "upload_time": 16
+            }
+        }
+    }, 
+    "aliquot_id": null, 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "394b0c816b7bbe2a4ccfffa02f9498fb", 
+                "file_size": 48931
+            }
+        }
+    ], 
+    "data_type": "Muse-VCF", 
+    "files": [
+        {
+            "file_md5sum": "58164295dd75c8e94bb9d6de262b51c1", 
+            "file_name": "f90a074e-d82f-f6bb-e040-11ac0d487334.MUSE_1-0rc-b391201-vcf.20160101.somatic.snv_mnv.vcf.gz", 
+            "file_size": 135068, 
+            "object_id": "417dda2f-7c87-5f9f-9bf4-f33f71842eb9"
+        }, 
+        {
+            "file_md5sum": "ddd1623153977188f5dadb3c97ce8afb", 
+            "file_name": "f90a074e-d82f-f6bb-e040-11ac0d487334.MUSE_1-0rc-b391201-vcf.20160101.somatic.snv_mnv.vcf.gz.idx", 
+            "file_size": 59511, 
+            "object_id": "977e30d3-41c9-54d5-b592-fabb58050ac9"
+        }, 
+        {
+            "file_md5sum": "9c506f25ff89d59018ece6be7a2ea12a", 
+            "file_name": "f901353f-fdeb-5a55-e040-11ac0c482e89.MUSE_1-0rc-b391201-vcf.20160101.somatic.snv_mnv.vcf.gz", 
+            "file_size": 135766, 
+            "object_id": "1bb35ac3-cdb8-53be-b60f-113679b22c1e"
+        }, 
+        {
+            "file_md5sum": "8fc8a3b98b897dc480c30f92abce5fec", 
+            "file_name": "f901353f-fdeb-5a55-e040-11ac0c482e89.MUSE_1-0rc-b391201-vcf.20160101.somatic.snv_mnv.vcf.gz.idx", 
+            "file_size": 58218, 
+            "object_id": "c93cf130-fcc4-54c5-a0f4-40f26ffac5f8"
+        }, 
+        {
+            "file_md5sum": "394b0c816b7bbe2a4ccfffa02f9498fb", 
+            "file_name": "fc09fcdf-cd94-4a6f-b2e9-95d99fa6e1d5.xml", 
+            "file_size": 48931, 
+            "object_id": "e5286fbe-1400-5f2a-b315-9fee4fba56db"
+        }
+    ], 
+    "gnos_id": "fc09fcdf-cd94-4a6f-b2e9-95d99fa6e1d5", 
+    "gnos_repo": [
+        "https://gtrepo-osdc-icgc.annailabs.com/"
+    ], 
+    "project_code": "CMDI-UK", 
+    "specimen_type": null, 
+    "submitter_donor_id": "CGP_donor_1600817", 
+    "submitter_sample_id": null, 
+    "submitter_specimen_id": null, 
+    "vcf_workflow_result_version": "v1"
+}

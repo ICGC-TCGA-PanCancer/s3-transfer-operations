@@ -1,0 +1,59 @@
+{
+    "_runs_": {
+        "run_1454298654_386647a0-5f8b-4196-bab3-c5e5a51b5314": {
+            "downloading": {
+                "gnos-download_time": 50, 
+                "start": 1454308060, 
+                "stop": 1454308110, 
+                "time": 50
+            }, 
+            "uploading": {
+                "copy_meta_time": 1, 
+                "start": 1454308115, 
+                "stop": 1454308131, 
+                "time": 16, 
+                "upload_time": 15
+            }
+        }
+    }, 
+    "aliquot_id": null, 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "2349a9473a631b3d175bff5b9d37a502", 
+                "file_size": 36919
+            }
+        }
+    ], 
+    "data_type": "Muse-VCF", 
+    "files": [
+        {
+            "file_md5sum": "3b6b897fd98b4d54829d279f90e0becc", 
+            "file_name": "ebe80d6c-7513-4f5e-9919-669b6d1fa68c.MUSE_1-0rc-vcf.20151107.somatic.snv_mnv.vcf.gz", 
+            "file_size": 109016, 
+            "object_id": "ccc420cf-6374-55bf-83b1-a92955fa42ed"
+        }, 
+        {
+            "file_md5sum": "93f1129ba01af0923106537854707543", 
+            "file_name": "ebe80d6c-7513-4f5e-9919-669b6d1fa68c.MUSE_1-0rc-vcf.20151107.somatic.snv_mnv.vcf.gz.idx", 
+            "file_size": 65582, 
+            "object_id": "f585624b-c623-58b2-a792-61f893aa9af4"
+        }, 
+        {
+            "file_md5sum": "2349a9473a631b3d175bff5b9d37a502", 
+            "file_name": "50b7fc0f-b2f7-4cc9-9178-2ea141292fcc.xml", 
+            "file_size": 36919, 
+            "object_id": "b0efd619-331e-521e-997a-2f4461250583"
+        }
+    ], 
+    "gnos_id": "50b7fc0f-b2f7-4cc9-9178-2ea141292fcc", 
+    "gnos_repo": [
+        "https://gtrepo-osdc-icgc.annailabs.com/"
+    ], 
+    "project_code": "RECA-EU", 
+    "specimen_type": null, 
+    "submitter_donor_id": "C0025", 
+    "submitter_sample_id": null, 
+    "submitter_specimen_id": null, 
+    "vcf_workflow_result_version": "v1"
+}
