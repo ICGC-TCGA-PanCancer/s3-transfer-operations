@@ -1,0 +1,73 @@
+{
+    "_runs_": {
+        "run_1458779926_f1f931f3-abbc-413f-af5e-f7480b9f058a": {
+            "downloading": {
+                "gnos-download_time": 140, 
+                "start": 1458784969, 
+                "stop": 1458785109, 
+                "time": 140
+            }, 
+            "uploading": {
+                "start": 1458785115, 
+                "stop": 1458785135, 
+                "time": 20, 
+                "upload_time": 20
+            }
+        }, 
+        "run_1458780546_1a9f6a5e-7a0e-44ba-a205-e0b94864d4b6": {
+            "downloading": {
+                "gnos-download_time": 147, 
+                "start": 1458840462, 
+                "stop": 1458840609, 
+                "time": 147
+            }, 
+            "uploading": {
+                "copy_meta_time": 1, 
+                "start": 1458840661, 
+                "stop": 1458840677, 
+                "time": 16, 
+                "upload_time": 15
+            }
+        }
+    }, 
+    "aliquot_id": null, 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "3735941627c06f4f4c0de714d4032fac", 
+                "file_size": 34282
+            }
+        }
+    ], 
+    "data_type": "Muse-VCF", 
+    "files": [
+        {
+            "file_md5sum": "5b28c1cfb4978bdabbdef4aa4ba3f7c6", 
+            "file_name": "cdf045a6-ab6a-4dc5-b0b0-d72fbb26b0bb.MUSE_1-0rc-b391201-vcf.20160209.somatic.snv_mnv.vcf.gz", 
+            "file_size": 118959, 
+            "object_id": "bc16a4ff-7dcd-5113-80f9-347b6df05fdd"
+        }, 
+        {
+            "file_md5sum": "c49f1ae93f05ee61177984636fde986c", 
+            "file_name": "cdf045a6-ab6a-4dc5-b0b0-d72fbb26b0bb.MUSE_1-0rc-b391201-vcf.20160209.somatic.snv_mnv.vcf.gz.idx", 
+            "file_size": 65841, 
+            "object_id": "979b2f3c-a091-55b5-b841-dc5d406b16df"
+        }, 
+        {
+            "file_md5sum": "3735941627c06f4f4c0de714d4032fac", 
+            "file_name": "d7396341-9426-4ea5-8f7c-03b3bd19e815.xml", 
+            "file_size": 34282, 
+            "object_id": "1de03b9b-6db6-58d5-911d-04f33ecf7235"
+        }
+    ], 
+    "gnos_id": "d7396341-9426-4ea5-8f7c-03b3bd19e815", 
+    "gnos_repo": [
+        "https://gtrepo-osdc-icgc.annailabs.com/"
+    ], 
+    "project_code": "RECA-EU", 
+    "specimen_type": null, 
+    "submitter_donor_id": "C0042", 
+    "submitter_sample_id": null, 
+    "submitter_specimen_id": null, 
+    "vcf_workflow_result_version": "v1"
+}

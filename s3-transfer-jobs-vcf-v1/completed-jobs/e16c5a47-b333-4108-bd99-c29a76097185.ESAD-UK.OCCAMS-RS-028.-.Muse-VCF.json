@@ -1,0 +1,73 @@
+{
+    "_runs_": {
+        "run_1458779926_f1f931f3-abbc-413f-af5e-f7480b9f058a": {
+            "downloading": {
+                "gnos-download_time": 136, 
+                "start": 1458785238, 
+                "stop": 1458785374, 
+                "time": 136
+            }, 
+            "uploading": {
+                "start": 1458785396, 
+                "stop": 1458785418, 
+                "time": 22, 
+                "upload_time": 21
+            }
+        }, 
+        "run_1458780358_12d93f3c-2b5f-4d60-b9f2-5c2ae5e2851d": {
+            "downloading": {
+                "gnos-download_time": 133, 
+                "start": 1458841634, 
+                "stop": 1458841767, 
+                "time": 133
+            }, 
+            "uploading": {
+                "copy_meta_time": 1, 
+                "start": 1458841772, 
+                "stop": 1458841789, 
+                "time": 17, 
+                "upload_time": 16
+            }
+        }
+    }, 
+    "aliquot_id": null, 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "7cc6e6c2eb4382d2b6c2b6a65fa6330d", 
+                "file_size": 36480
+            }
+        }
+    ], 
+    "data_type": "Muse-VCF", 
+    "files": [
+        {
+            "file_md5sum": "d823c5d26d7b2cd661d997301dbad255", 
+            "file_name": "60525b38-c34b-479b-86d3-013c7e567b8f.MUSE_1-0rc-vcf.20151118.somatic.snv_mnv.vcf.gz", 
+            "file_size": 1426148, 
+            "object_id": "07003170-db3d-53aa-899e-f3835c246d8e"
+        }, 
+        {
+            "file_md5sum": "40ff7ec15276fb95967d930a21e12f54", 
+            "file_name": "60525b38-c34b-479b-86d3-013c7e567b8f.MUSE_1-0rc-vcf.20151118.somatic.snv_mnv.vcf.gz.idx", 
+            "file_size": 541517, 
+            "object_id": "680f965e-0a28-5a5b-87af-e6f2309bd3f1"
+        }, 
+        {
+            "file_md5sum": "7cc6e6c2eb4382d2b6c2b6a65fa6330d", 
+            "file_name": "e16c5a47-b333-4108-bd99-c29a76097185.xml", 
+            "file_size": 36480, 
+            "object_id": "54c59b22-85e3-5b06-afa6-bdefa20db671"
+        }
+    ], 
+    "gnos_id": "e16c5a47-b333-4108-bd99-c29a76097185", 
+    "gnos_repo": [
+        "https://gtrepo-osdc-icgc.annailabs.com/"
+    ], 
+    "project_code": "ESAD-UK", 
+    "specimen_type": null, 
+    "submitter_donor_id": "OCCAMS-RS-028", 
+    "submitter_sample_id": null, 
+    "submitter_specimen_id": null, 
+    "vcf_workflow_result_version": "v1"
+}
