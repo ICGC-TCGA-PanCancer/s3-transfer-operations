@@ -1,0 +1,73 @@
+{
+    "_runs_": {
+        "run_1458779926_f1f931f3-abbc-413f-af5e-f7480b9f058a": {
+            "downloading": {
+                "gnos-download_time": 129, 
+                "start": 1458783447, 
+                "stop": 1458783577, 
+                "time": 130
+            }, 
+            "uploading": {
+                "start": 1458783583, 
+                "stop": 1458783608, 
+                "time": 25, 
+                "upload_time": 24
+            }
+        }, 
+        "run_1458780215_1f6835ff-8f03-4f15-91e3-315d040d7cb8": {
+            "downloading": {
+                "gnos-download_time": 142, 
+                "start": 1458837530, 
+                "stop": 1458837672, 
+                "time": 142
+            }, 
+            "uploading": {
+                "copy_meta_time": 1, 
+                "start": 1458837676, 
+                "stop": 1458837691, 
+                "time": 15, 
+                "upload_time": 14
+            }
+        }
+    }, 
+    "aliquot_id": null, 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "bf23962762cc089f93f1847d8dbf7147", 
+                "file_size": 41932
+            }
+        }
+    ], 
+    "data_type": "Muse-VCF", 
+    "files": [
+        {
+            "file_md5sum": "7c67f8f006aad348a6817204c7875ec7", 
+            "file_name": "fc7f8eeb-9c40-123e-e040-11ac0c484061.MUSE_1-0rc-vcf.20150918.somatic.snv_mnv.vcf.gz", 
+            "file_size": 222172, 
+            "object_id": "0ccf2566-5c91-540a-8b1e-20e994bf8b90"
+        }, 
+        {
+            "file_md5sum": "e50ece65205e81290b200e7e03df7ebd", 
+            "file_name": "fc7f8eeb-9c40-123e-e040-11ac0c484061.MUSE_1-0rc-vcf.20150918.somatic.snv_mnv.vcf.gz.idx", 
+            "file_size": 121019, 
+            "object_id": "79fc0dec-1ef2-56c5-8e0b-a346a7be31e3"
+        }, 
+        {
+            "file_md5sum": "bf23962762cc089f93f1847d8dbf7147", 
+            "file_name": "95660265-8f48-4516-9368-f13c44d9e564.xml", 
+            "file_size": 41932, 
+            "object_id": "fa46a068-e157-5d86-b2e8-245d818917b5"
+        }
+    ], 
+    "gnos_id": "95660265-8f48-4516-9368-f13c44d9e564", 
+    "gnos_repo": [
+        "https://gtrepo-osdc-icgc.annailabs.com/"
+    ], 
+    "project_code": "BRCA-UK", 
+    "specimen_type": null, 
+    "submitter_donor_id": "CGP_donor_1606179", 
+    "submitter_sample_id": null, 
+    "submitter_specimen_id": null, 
+    "vcf_workflow_result_version": "v1"
+}
