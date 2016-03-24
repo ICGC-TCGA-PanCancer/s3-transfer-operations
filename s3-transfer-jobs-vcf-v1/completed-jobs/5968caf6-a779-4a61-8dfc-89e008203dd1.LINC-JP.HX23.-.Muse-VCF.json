@@ -1,0 +1,73 @@
+{
+    "_runs_": {
+        "run_1458779926_f1f931f3-abbc-413f-af5e-f7480b9f058a": {
+            "downloading": {
+                "gnos-download_time": 134, 
+                "start": 1458782119, 
+                "stop": 1458782253, 
+                "time": 134
+            }, 
+            "uploading": {
+                "start": 1458782289, 
+                "stop": 1458782308, 
+                "time": 19, 
+                "upload_time": 18
+            }
+        }, 
+        "run_1458780546_1a9f6a5e-7a0e-44ba-a205-e0b94864d4b6": {
+            "downloading": {
+                "gnos-download_time": 131, 
+                "start": 1458835456, 
+                "stop": 1458835588, 
+                "time": 132
+            }, 
+            "uploading": {
+                "copy_meta_time": 1, 
+                "start": 1458835598, 
+                "stop": 1458835614, 
+                "time": 16, 
+                "upload_time": 15
+            }
+        }
+    }, 
+    "aliquot_id": null, 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "d94e84090c690be6d77d39f69f953f03", 
+                "file_size": 36750
+            }
+        }
+    ], 
+    "data_type": "Muse-VCF", 
+    "files": [
+        {
+            "file_md5sum": "342b0d93ce3b183c01906571821ab213", 
+            "file_name": "145f6dbb-9744-44f7-8485-e440689de3fd.MUSE_1-0rc-vcf.20151025.somatic.snv_mnv.vcf.gz", 
+            "file_size": 124717, 
+            "object_id": "85af713d-cefc-5a7e-bc72-47467a174cc4"
+        }, 
+        {
+            "file_md5sum": "587625c239f6e5f5396d28d4040f61bc", 
+            "file_name": "145f6dbb-9744-44f7-8485-e440689de3fd.MUSE_1-0rc-vcf.20151025.somatic.snv_mnv.vcf.gz.idx", 
+            "file_size": 70060, 
+            "object_id": "2cbd85df-a3a6-5620-bcea-93179cf3bdf2"
+        }, 
+        {
+            "file_md5sum": "d94e84090c690be6d77d39f69f953f03", 
+            "file_name": "5968caf6-a779-4a61-8dfc-89e008203dd1.xml", 
+            "file_size": 36750, 
+            "object_id": "ea5ae260-b772-5fb1-95e2-37b2c64b5912"
+        }
+    ], 
+    "gnos_id": "5968caf6-a779-4a61-8dfc-89e008203dd1", 
+    "gnos_repo": [
+        "https://gtrepo-osdc-icgc.annailabs.com/"
+    ], 
+    "project_code": "LINC-JP", 
+    "specimen_type": null, 
+    "submitter_donor_id": "HX23", 
+    "submitter_sample_id": null, 
+    "submitter_specimen_id": null, 
+    "vcf_workflow_result_version": "v1"
+}
