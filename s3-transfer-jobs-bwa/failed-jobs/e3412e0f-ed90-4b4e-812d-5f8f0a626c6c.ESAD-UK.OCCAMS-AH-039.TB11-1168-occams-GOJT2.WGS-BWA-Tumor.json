@@ -1,0 +1,63 @@
+{
+    "_runs_": {
+        "run_1458835110_73dfb6c1-68a0-4095-b13d-3359514dcee6": {
+            "downloading": {
+                "gnos-download_time": 3, 
+                "start": 1458961089, 
+                "stop": 1458961093, 
+                "time": 4
+            }, 
+            "uploading": {
+                "start": 1458961099, 
+                "stop": 1458969488, 
+                "time": 8389
+            }
+        }
+    }, 
+    "aliquot_id": "9749a9a5-cb7f-4038-a5f9-5e2d6b97c689", 
+    "available_repos": [
+        {
+            "https://gtrepo-ebi.annailabs.com/": {
+                "file_md5sum": "702d2c67627baa923a225785096c9bb2", 
+                "file_size": 31708
+            }
+        }, 
+        {
+            "https://gtrepo-bsc.annailabs.com/": {
+                "file_md5sum": "5ca3de5ee29e4ffa885f2dbbc420d496", 
+                "file_size": 31708
+            }
+        }
+    ], 
+    "data_type": "WGS-BWA-Tumor", 
+    "files": [
+        {
+            "file_md5sum": "fe3227b1a765e834361ea5722bbd3cfb", 
+            "file_name": "fe3227b1a765e834361ea5722bbd3cfb.bam", 
+            "file_size": 188697462733, 
+            "object_id": "87c6ab96-2ab7-51a6-88d3-77fa8b0caded"
+        }, 
+        {
+            "file_md5sum": "2bcb66af44575dc37d6c04a2691c07aa", 
+            "file_name": "fe3227b1a765e834361ea5722bbd3cfb.bam.bai", 
+            "file_size": 15271176, 
+            "object_id": "e7f41b66-f109-5ccf-8bbb-0f61f2b84971"
+        }, 
+        {
+            "file_md5sum": "702d2c67627baa923a225785096c9bb2", 
+            "file_name": "e3412e0f-ed90-4b4e-812d-5f8f0a626c6c.xml", 
+            "file_size": 31708, 
+            "object_id": "cba67ed3-b091-5422-aa53-970242f6a665"
+        }
+    ], 
+    "gnos_id": "e3412e0f-ed90-4b4e-812d-5f8f0a626c6c", 
+    "gnos_repo": [
+        "https://gtrepo-ebi.annailabs.com/"
+    ], 
+    "is_santa_cruz": false, 
+    "project_code": "ESAD-UK", 
+    "specimen_type": "Primary tumour - solid tissue", 
+    "submitter_donor_id": "OCCAMS-AH-039", 
+    "submitter_sample_id": "LP6007404-DNA_A01", 
+    "submitter_specimen_id": "TB11-1168-occams-GOJT2"
+}
