@@ -1,0 +1,72 @@
+{
+    "_runs_": {
+        "run_1454298278_75dd4641-42c1-45d2-a4cb-1480434a27d0": {
+            "downloading": {
+                "gnos-download_time": 30, 
+                "start": 1454320016, 
+                "stop": 1454320047, 
+                "time": 31
+            }, 
+            "uploading": {
+                "copy_meta_time": 2, 
+                "start": 1454320052, 
+                "stop": 1454320068, 
+                "time": 16, 
+                "upload_time": 14
+            }
+        }, 
+        "run_1454434668_8a5aa7f7-e742-4ab6-9715-7047d070f1ed": {
+            "downloading": {
+                "c2f89f74-d6e5-4c99-8943-f67d74e378f6.xml-download_time": 13, 
+                "c2f89f74-d6e5-4c99-8943-f67d74e378f6.xml-md5sum_time": 0, 
+                "d515c7d2-2314-46bf-9736-ff3f3d2ab599.MUSE_1-0rc-vcf.20151120.somatic.snv_mnv.vcf.gz-download_time": 14, 
+                "d515c7d2-2314-46bf-9736-ff3f3d2ab599.MUSE_1-0rc-vcf.20151120.somatic.snv_mnv.vcf.gz-md5sum_time": 0, 
+                "d515c7d2-2314-46bf-9736-ff3f3d2ab599.MUSE_1-0rc-vcf.20151120.somatic.snv_mnv.vcf.gz.idx-download_time": 12, 
+                "d515c7d2-2314-46bf-9736-ff3f3d2ab599.MUSE_1-0rc-vcf.20151120.somatic.snv_mnv.vcf.gz.idx-md5sum_time": 0, 
+                "start": 1454456825, 
+                "stop": 1454456864, 
+                "time": 39
+            }
+        }
+    }, 
+    "aliquot_id": null, 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "57eac4bb275795a68ee869da2ce6956e", 
+                "file_size": 36588
+            }
+        }
+    ], 
+    "data_type": "Muse-VCF", 
+    "files": [
+        {
+            "file_md5sum": "2bc903331331ea3185e869a5add1c996", 
+            "file_name": "d515c7d2-2314-46bf-9736-ff3f3d2ab599.MUSE_1-0rc-vcf.20151120.somatic.snv_mnv.vcf.gz", 
+            "file_size": 181468, 
+            "object_id": "bf1888dc-0f54-540d-afa4-ecf5e66c591a"
+        }, 
+        {
+            "file_md5sum": "8a0b49d1988301d80b8a786b3967be84", 
+            "file_name": "d515c7d2-2314-46bf-9736-ff3f3d2ab599.MUSE_1-0rc-vcf.20151120.somatic.snv_mnv.vcf.gz.idx", 
+            "file_size": 102226, 
+            "object_id": "82e74993-35ef-579d-b81d-04aeec5cda38"
+        }, 
+        {
+            "file_md5sum": "57eac4bb275795a68ee869da2ce6956e", 
+            "file_name": "c2f89f74-d6e5-4c99-8943-f67d74e378f6.xml", 
+            "file_size": 36588, 
+            "object_id": "9e732493-33a2-51c5-acda-584c39f9cfcf"
+        }
+    ], 
+    "gnos_id": "c2f89f74-d6e5-4c99-8943-f67d74e378f6", 
+    "gnos_repo": [
+        "https://gtrepo-osdc-icgc.annailabs.com/"
+    ], 
+    "project_code": "PAEN-IT", 
+    "specimen_type": null, 
+    "submitter_donor_id": "ITNET-0935", 
+    "submitter_sample_id": null, 
+    "submitter_specimen_id": null, 
+    "vcf_workflow_result_version": "v1"
+}
