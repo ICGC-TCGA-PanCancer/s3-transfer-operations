@@ -1,0 +1,52 @@
+{
+    "_runs_": {
+        "run_1473540817_29585212-08cd-4ca2-972f-1d81112bd0fa": {
+            "downloading": {
+                "gnos-download_time": 204, 
+                "start": 1473546360, 
+                "stop": 1473546564, 
+                "time": 204
+            }
+        }
+    }, 
+    "aliquot_id": "30465ec8-21e1-45f6-932a-e67c453fbc93", 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "72ce7187fc8ab79c2e86d22a00d3d1c3", 
+                "file_size": 32134
+            }
+        }
+    ], 
+    "data_type": "RNA_Seq-Tophat-Tumor", 
+    "files": [
+        {
+            "file_md5sum": "67c8e6528878f03bca0f5be3b9fe5708", 
+            "file_name": "PCAWG.7dc8293b-a0d9-4459-848f-03f4ea549563.TopHat2.v1.bam", 
+            "file_size": 13167576220, 
+            "object_id": "0f8d9b8a-8487-5ae8-87b0-8b7d028ec23c"
+        }, 
+        {
+            "file_md5sum": "b7ebb0a3bfb94da99c8ddc9eb4534c71", 
+            "file_name": "PCAWG.7dc8293b-a0d9-4459-848f-03f4ea549563.TopHat2.v1.bam.bai", 
+            "file_size": 3777520, 
+            "object_id": "02364073-09f5-51f0-8276-a6c122cbc4fa"
+        }, 
+        {
+            "file_md5sum": "72ce7187fc8ab79c2e86d22a00d3d1c3", 
+            "file_name": "2718e269-66cb-4c8a-aba7-a6f0d071f01a.xml", 
+            "file_size": 32134, 
+            "object_id": "5b5f29a1-4875-5f31-893b-897e548b558f"
+        }
+    ], 
+    "gnos_id": "2718e269-66cb-4c8a-aba7-a6f0d071f01a", 
+    "gnos_repo": [
+        "https://gtrepo-osdc-icgc.annailabs.com/"
+    ], 
+    "is_santa_cruz": false, 
+    "project_code": "PACA-AU", 
+    "specimen_type": "Primary tumour", 
+    "submitter_donor_id": "ICGC_0115", 
+    "submitter_sample_id": "8031670", 
+    "submitter_specimen_id": "8031670"
+}
