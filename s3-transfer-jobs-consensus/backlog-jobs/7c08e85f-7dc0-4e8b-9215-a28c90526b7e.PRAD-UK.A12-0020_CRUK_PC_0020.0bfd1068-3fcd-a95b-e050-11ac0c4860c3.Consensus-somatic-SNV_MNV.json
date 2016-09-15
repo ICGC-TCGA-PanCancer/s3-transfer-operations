@@ -1,0 +1,59 @@
+{
+    "_runs_": {
+        "run_1473909384_213043f9-3483-4781-bdc7-807ff507278d": {
+            "downloading": {
+                "gnos-download_time": 29, 
+                "start": 1473946352, 
+                "stop": 1473946382, 
+                "time": 30
+            }, 
+            "uploading": {
+                "copy_meta_time": 1, 
+                "start": 1473946391, 
+                "stop": 1473946417, 
+                "time": 26, 
+                "upload_time": 25
+            }
+        }
+    }, 
+    "aliquot_id": "0bfd1068-3fcd-a95b-e050-11ac0c4860c3", 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "4c2c43176a046e5fb911afcc6a066d98", 
+                "file_size": 31646
+            }
+        }
+    ], 
+    "data_type": "Consensus-somatic-SNV_MNV", 
+    "files": [
+        {
+            "file_md5sum": "356477466df9eb717b84f811790f18a3", 
+            "file_name": "0bfd1068-3fcd-a95b-e050-11ac0c4860c3.consensus.20160830.somatic.snv_mnv.vcf.gz", 
+            "file_size": 127179, 
+            "object_id": "b09e6e12-5443-5ceb-8b4e-3f07704cbdd9"
+        }, 
+        {
+            "file_md5sum": "78e9c3e64d04c7329cb0995560c5f04f", 
+            "file_name": "0bfd1068-3fcd-a95b-e050-11ac0c4860c3.consensus.20160830.somatic.snv_mnv.vcf.gz.tbi", 
+            "file_size": 65634, 
+            "object_id": "326bd1a7-e5e7-5f89-a748-220d49a0c8f4"
+        }, 
+        {
+            "file_md5sum": "4c2c43176a046e5fb911afcc6a066d98", 
+            "file_name": "7c08e85f-7dc0-4e8b-9215-a28c90526b7e.xml", 
+            "file_size": 31646, 
+            "object_id": "4fa71b96-ac11-5908-b9a9-a800b351ef01"
+        }
+    ], 
+    "gnos_id": "7c08e85f-7dc0-4e8b-9215-a28c90526b7e", 
+    "gnos_repo": [
+        "https://gtrepo-osdc-icgc.annailabs.com/"
+    ], 
+    "project_code": "PRAD-UK", 
+    "specimen_type": null, 
+    "submitter_donor_id": "A12-0020_CRUK_PC_0020", 
+    "submitter_sample_id": null, 
+    "submitter_specimen_id": "0bfd1068-3fcd-a95b-e050-11ac0c4860c3", 
+    "vcf_workflow_result_version": "v1"
+}

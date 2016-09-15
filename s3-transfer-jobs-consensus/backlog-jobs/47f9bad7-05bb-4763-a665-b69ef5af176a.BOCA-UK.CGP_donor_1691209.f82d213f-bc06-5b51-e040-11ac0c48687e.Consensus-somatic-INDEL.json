@@ -1,0 +1,59 @@
+{
+    "_runs_": {
+        "run_1473909384_213043f9-3483-4781-bdc7-807ff507278d": {
+            "downloading": {
+                "gnos-download_time": 27, 
+                "start": 1473942829, 
+                "stop": 1473942856, 
+                "time": 27
+            }, 
+            "uploading": {
+                "copy_meta_time": 1, 
+                "start": 1473942867, 
+                "stop": 1473942892, 
+                "time": 25, 
+                "upload_time": 24
+            }
+        }
+    }, 
+    "aliquot_id": "f82d213f-bc06-5b51-e040-11ac0c48687e", 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "7c7c0f19219e39fb8f7f06b20cdd9171", 
+                "file_size": 38798
+            }
+        }
+    ], 
+    "data_type": "Consensus-somatic-INDEL", 
+    "files": [
+        {
+            "file_md5sum": "5f97d49d33ffa8739eb19886b994eb1a", 
+            "file_name": "f82d213f-bc06-5b51-e040-11ac0c48687e.consensus.20160830.somatic.indel.vcf.gz", 
+            "file_size": 26356, 
+            "object_id": "95b3351c-a6eb-5ba5-a338-b879ae5efc64"
+        }, 
+        {
+            "file_md5sum": "0f88a41a03709899f408ac402c28a9d3", 
+            "file_name": "f82d213f-bc06-5b51-e040-11ac0c48687e.consensus.20160830.somatic.indel.vcf.gz.tbi", 
+            "file_size": 14600, 
+            "object_id": "53b23d3f-9f15-52d3-af3b-fb50efa0e656"
+        }, 
+        {
+            "file_md5sum": "7c7c0f19219e39fb8f7f06b20cdd9171", 
+            "file_name": "47f9bad7-05bb-4763-a665-b69ef5af176a.xml", 
+            "file_size": 38798, 
+            "object_id": "4bc6eb45-e27d-5aed-9ca2-6c305ac1c5c3"
+        }
+    ], 
+    "gnos_id": "47f9bad7-05bb-4763-a665-b69ef5af176a", 
+    "gnos_repo": [
+        "https://gtrepo-osdc-icgc.annailabs.com/"
+    ], 
+    "project_code": "BOCA-UK", 
+    "specimen_type": null, 
+    "submitter_donor_id": "CGP_donor_1691209", 
+    "submitter_sample_id": null, 
+    "submitter_specimen_id": "f82d213f-bc06-5b51-e040-11ac0c48687e", 
+    "vcf_workflow_result_version": "v1"
+}

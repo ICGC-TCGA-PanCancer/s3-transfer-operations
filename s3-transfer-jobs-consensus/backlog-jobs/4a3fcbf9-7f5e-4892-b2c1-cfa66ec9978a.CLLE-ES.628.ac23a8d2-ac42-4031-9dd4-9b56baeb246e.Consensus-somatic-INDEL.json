@@ -1,0 +1,59 @@
+{
+    "_runs_": {
+        "run_1473909332_e0a1bd01-4d3f-42ad-9c03-ff22393f9d85": {
+            "downloading": {
+                "gnos-download_time": 28, 
+                "start": 1473950458, 
+                "stop": 1473950486, 
+                "time": 28
+            }, 
+            "uploading": {
+                "copy_meta_time": 1, 
+                "start": 1473950498, 
+                "stop": 1473950525, 
+                "time": 27, 
+                "upload_time": 26
+            }
+        }
+    }, 
+    "aliquot_id": "ac23a8d2-ac42-4031-9dd4-9b56baeb246e", 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "249f688a3398fd8b57ac73442dacc7ed", 
+                "file_size": 33316
+            }
+        }
+    ], 
+    "data_type": "Consensus-somatic-INDEL", 
+    "files": [
+        {
+            "file_md5sum": "bb3e7773719e11d07210246230130d6f", 
+            "file_name": "ac23a8d2-ac42-4031-9dd4-9b56baeb246e.consensus.20160830.somatic.indel.vcf.gz", 
+            "file_size": 19769, 
+            "object_id": "97ef533d-60c0-5ae6-b09f-99da817e8322"
+        }, 
+        {
+            "file_md5sum": "8c1212f42cf811792b27d753bfc4b1d4", 
+            "file_name": "ac23a8d2-ac42-4031-9dd4-9b56baeb246e.consensus.20160830.somatic.indel.vcf.gz.tbi", 
+            "file_size": 11766, 
+            "object_id": "ec0b9cd8-ee4c-55b1-bacb-435af488d4d4"
+        }, 
+        {
+            "file_md5sum": "249f688a3398fd8b57ac73442dacc7ed", 
+            "file_name": "4a3fcbf9-7f5e-4892-b2c1-cfa66ec9978a.xml", 
+            "file_size": 33316, 
+            "object_id": "f8b748d4-d509-5dc5-8d68-d69a40d846cb"
+        }
+    ], 
+    "gnos_id": "4a3fcbf9-7f5e-4892-b2c1-cfa66ec9978a", 
+    "gnos_repo": [
+        "https://gtrepo-osdc-icgc.annailabs.com/"
+    ], 
+    "project_code": "CLLE-ES", 
+    "specimen_type": null, 
+    "submitter_donor_id": "628", 
+    "submitter_sample_id": null, 
+    "submitter_specimen_id": "ac23a8d2-ac42-4031-9dd4-9b56baeb246e", 
+    "vcf_workflow_result_version": "v1"
+}
