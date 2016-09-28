@@ -1,0 +1,59 @@
+{
+    "_runs_": {
+        "run_1475029326_a4fbf4ea-ba12-453c-99a2-db9929a753cf": {
+            "downloading": {
+                "gnos-download_time": 25, 
+                "start": 1475032839, 
+                "stop": 1475032864, 
+                "time": 25
+            }, 
+            "uploading": {
+                "copy_meta_time": 1, 
+                "start": 1475032871, 
+                "stop": 1475032902, 
+                "time": 31, 
+                "upload_time": 30
+            }
+        }
+    }, 
+    "aliquot_id": "674819dc-c622-11e3-bf01-24c6515278c0", 
+    "available_repos": [
+        {
+            "https://gtrepo-osdc-icgc.annailabs.com/": {
+                "file_md5sum": "bf72906ac715b2dfaf3fd8b84e264ed5", 
+                "file_size": 31460
+            }
+        }
+    ], 
+    "data_type": "Consensus-somatic-INDEL", 
+    "files": [
+        {
+            "file_md5sum": "d6a4e427bf82c5244dc5f56e79e08076", 
+            "file_name": "674819dc-c622-11e3-bf01-24c6515278c0.consensus.20160830.somatic.indel.vcf.gz", 
+            "file_size": 40164, 
+            "object_id": "2ed603f3-ca92-5f42-ad33-dc9006d525e2"
+        }, 
+        {
+            "file_md5sum": "2175dc095b9cb3d54af0a9cd44dcd4fe", 
+            "file_name": "674819dc-c622-11e3-bf01-24c6515278c0.consensus.20160830.somatic.indel.vcf.gz.tbi", 
+            "file_size": 20057, 
+            "object_id": "9a547fdc-ef85-5c55-a291-e56d6c41b93a"
+        }, 
+        {
+            "file_md5sum": "bf72906ac715b2dfaf3fd8b84e264ed5", 
+            "file_name": "faf38105-9425-4078-95e5-b3ee3aa6cdd5.xml", 
+            "file_size": 31460, 
+            "object_id": "3db1a557-3a8b-543b-86be-b7035f5fd00c"
+        }
+    ], 
+    "gnos_id": "faf38105-9425-4078-95e5-b3ee3aa6cdd5", 
+    "gnos_repo": [
+        "https://gtrepo-osdc-icgc.annailabs.com/"
+    ], 
+    "project_code": "LIRI-JP", 
+    "specimen_type": null, 
+    "submitter_donor_id": "RK038", 
+    "submitter_sample_id": null, 
+    "submitter_specimen_id": "674819dc-c622-11e3-bf01-24c6515278c0", 
+    "vcf_workflow_result_version": "v1"
+}
